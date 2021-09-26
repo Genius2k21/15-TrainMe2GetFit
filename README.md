@@ -47,19 +47,18 @@ Add details on how to use
 
 
 ## Github Project:
-[Project Page](https://github.com/Genius2k21/15-TrainMe2GetFit/projects/1)
+You can find details of  this work and this project at [Project Page](https://github.com/Genius2k21/15-TrainMe2GetFit/projects/1)
             
 
-## Email Address:
+
+## Questions
+If you have any questions about the repo, open an issue or contact us directly at one of the below emails. 
+
+### Email Address:
 1. [Email Erica](mailto:)
 2. [Email Skylar](mailto:)
 3. [Email Ufuoma](mailto:)
 4. [Email Joseph](mailto:)
 5. [Email Adam](mailto:adam.niggebrugge@gmail.com)
-
-## Questions
-If you have any questions about the repo, open an issue or contact us directly at " myEmail@yahoo.com". You can find details of  this work and this project at
-https://github.com/Genius2k21/15-TrainMe2GetFit
-
 
 Copyright 2021 &copy;
