@@ -14,31 +14,44 @@ As your first opportunity to show employers your collaborative skills and coding
 
 
 ## Installation:
-Add Installation details
-             
+```
+
+npm init
+
+npm install mysql2
+
+npm install express
+
+npm install sequelize
+
+```
 
 ### Usage:
 Add details on how to use
              
 
 ## Licence:
-Add licence details          
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Contributors:
- Adam N
+ [Adam Niggebrugge](https://github.com/adam-niggebrugge)
  Erica B
  Joseph B
  Skylar H
  Ufuoma E
 
 
-## Github Name:
-https://github.com/Genius2k21/15-TrainMe2GetFit
+## Github Project:
+[Project Page](https://github.com/Genius2k21/15-TrainMe2GetFit/projects/1)
             
 
 ## Email Address:
-myEmail@yahoo.com
+1. [Email Erica](mailto:)
+2. [Email Skylar](mailto:)
+3. [Email Ufuoma](mailto:)
+4. [Email Joseph](mailto:)
+5. [Email Adam](mailto:adam.niggebrugge@gmail.com)
 
 ## Questions
 If you have any questions about the repo, open an issue or contact us directly at " myEmail@yahoo.com". You can find details of  this work and this project at
