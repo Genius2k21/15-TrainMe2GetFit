@@ -36,10 +36,14 @@ Add details on how to use
 
 ## Contributors:
  [Adam Niggebrugge](https://github.com/adam-niggebrugge)
- Erica B
- Joseph B
- Skylar H
- Ufuoma E
+
+ [Erica B](https://github.com/unicorninvirgo)
+
+ [Joseph B](https://github.com/Genius2k21)
+
+ [Skylar H](https://github.com/Skylar-Harwell)
+
+ [Ufuoma E](https://github.com/uekemike)
 
 
 ## Github Project:
