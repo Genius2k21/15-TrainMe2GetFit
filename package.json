@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Genius2k21/15-TrainMe2GetFit/issues"
   },
-  "homepage": "https://github.com/Genius2k21/15-TrainMe2GetFit#readme"
+  "homepage": "https://github.com/Genius2k21/15-TrainMe2GetFit#readme",
+  "dependencies": {
+    "express-handlebars": "^5.3.4"
+  }
 }
