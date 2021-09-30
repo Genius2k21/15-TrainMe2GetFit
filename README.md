@@ -55,7 +55,7 @@ You can find details of  this work and this project at [Project Page](https://gi
 If you have any questions about the repo, open an issue or contact us directly at one of the below emails. 
 
 ### Email Address:
-1. [Email Erica](mailto:)
+1. [Email Erica](mailto:ebaity@anologics.com)
 2. [Email Skylar](mailto:randompinkerton@gmail.com)
 3. [Email Ufuoma](mailto:)
 4. [Email Joseph](mailto:)
