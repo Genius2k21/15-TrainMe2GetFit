@@ -59,7 +59,7 @@ If you have any questions about the repo, open an issue or contact us directly a
 1. [Email Erica](mailto:ebaity@anologics.com)
 2. [Email Skylar](mailto:randompinkerton@gmail.com)
 3. [Email Ufuoma](mailto:uekemike@yahoo.com)
-4. [Email Joseph](mailto:)
+4. [Email Joseph](mailto:josephblake2012@yahoo.com)
 5. [Email Adam](mailto:adam.niggebrugge@gmail.com)
 
 Copyright 2021 &copy;
