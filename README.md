@@ -57,7 +57,7 @@ If you have any questions about the repo, open an issue or contact us directly a
 ### Email Address:
 1. [Email Erica](mailto:)
 2. [Email Skylar](mailto:)
-3. [Email Ufuoma](mailto:)
+3. [Email Ufuoma](mailto:uekemike@yahoo.com)
 4. [Email Joseph](mailto:)
 5. [Email Adam](mailto:adam.niggebrugge@gmail.com)
 
