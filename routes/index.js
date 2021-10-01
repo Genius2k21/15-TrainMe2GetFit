@@ -3,12 +3,12 @@ const router = require()
 
 // The ROUTE we want to match --> /index1
 // And VIEW's we want to be passed to the WEB BROWSER 
-app.get("/index1", (req, res) => {
+app.get("/login", (req, res) => {
     
-    res.render('index');
+    res.render('login');
 });
 
 
-app.get("/index2", (req, res) => {
-    res.render('index2');
+app.get("/home", (req, res) => {
+    res.render('home');
 })
