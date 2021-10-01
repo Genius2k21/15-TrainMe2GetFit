@@ -1,14 +1,22 @@
 const router = require('express').Router();
 
 // The ROUTE we want to match --> /index1
-router.get("/index1", (req, res) => {
-    // The VIEW we want to be passed to the WEB BROWSER 
-    res.render('index');
+// The VIEW we want to be passed to the WEB BROWSER 
+router.get("/home", (req, res) => {
+    res.render('home');
 });
 
+router.get("/signup", (req, res) => {
+    res.render('signup');
+});
 
-router.get("/index2", (req, res) => {
-    res.render('index2');
+router.get("/login", (req, res) => {
+    
+    res.render('login');
+});
+
+router.get("/dashboard", (req, res) => {
+    res.render('dashboard');
 });
 
 
