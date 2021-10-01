@@ -1,5 +1,11 @@
 const router = require('express').Router();
 
+
+// The ROUTE we want to match --> /index1
+// The VIEW we want to be passed to the WEB BROWSER 
+// router.get("/home", (req, res) => {
+//     res.render('home');
+
 router.get('/login', (req, res) => {
     // If the user is already logged in, redirect the request to another route
     if (req.session.logged_in) {
@@ -8,20 +14,21 @@ router.get('/login', (req, res) => {
     }
   
     res.render('login');
+
 });
   
 
-
-// The ROUTE we want to match --> /index1
-// router.get("/index1", (req, res) => {
-//     // The VIEW we want to be passed to the WEB BROWSER 
-//     res.render('index');
-// });
+router.get("/signup", (req, res) => {
+    res.render('signup');
+});
 
 
-// router.get("/index2", (req, res) => {
-//     res.render('index2');
-// });
+
+
+router.get("/dashboard", (req, res) => {
+    res.render('dashboard');
+});
+
 
 
 module.exports = router;
