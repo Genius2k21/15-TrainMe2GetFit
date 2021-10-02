@@ -78,7 +78,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `diet`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `diet` (
+CREATE TABLE IF NOT EXISTS `client_diet` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
   `meal1` VARCHAR(255) NULL,
@@ -105,7 +105,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `workout`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `workout` (
+CREATE TABLE IF NOT EXISTS `client_workout` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `dayofweek` VARCHAR(15) NOT NULL,
   `sets` INT NOT NULL,
