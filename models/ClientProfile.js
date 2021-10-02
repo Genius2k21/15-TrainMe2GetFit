@@ -75,7 +75,7 @@ ClientProfile.init({
     create_dtm: {
       type: DataTypes.DATE,
       allowNull: true,
-      defaultValue: Sequelize.Sequelize.literal('CURRENT_TIMESTAMP')
+      //defaultValue: Sequelize.Sequelize.literal('CURRENT_TIMESTAMP')
     },
     update_dtm: {
       type: DataTypes.DATE,

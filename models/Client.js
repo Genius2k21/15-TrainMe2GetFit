@@ -1,4 +1,4 @@
-const { Model, DataTypes } = require('sequelize');
+const {Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class Client extends Model {}
@@ -57,7 +57,7 @@ Client.init({
     create_dtm: {
       type: DataTypes.DATE,
       allowNull: false,
-      defaultValue: Sequelize.Sequelize.literal('CURRENT_TIMESTAMP')
+      //defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
     },
     update_dtm: {
       type: DataTypes.DATE,
