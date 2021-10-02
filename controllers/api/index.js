@@ -1,9 +1,11 @@
-// const router = require('express').Router();
+const router = require('express').Router();
 
-// //const homeRoutes = require('./homeRoutes');
-// const apiRoutes = require('./api');
+const clientRoutes = require('./clientRoutes');
+const userRoutes = require('./userRoutes');
+const exerciseRoutes = require('./exerciseRoutes');
 
-// //router.use('/', homeRoutes);
-// router.use('/api', apiRoutes);
+router.use('/client', clientRoutes);
+router.use('/user', userRoutes);
+router.use('/exercise', exerciseRoutes);
 
-// module.exports = router;
+module.exports = router;

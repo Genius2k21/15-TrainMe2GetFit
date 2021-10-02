@@ -34,9 +34,10 @@ CREATE TABLE IF NOT EXISTS `user` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `username` VARCHAR(25) NOT NULL,
   `email` VARCHAR(125) NOT NULL,
+  `password` VARCHAR(25) NOT NULL,
   `user_type` VARCHAR(45) NOT NULL DEFAULT 'Trainer',
-  `create_dtm` VARCHAR(45) NOT NULL DEFAULT 'CURRENT_TIMESTAMP',
-  `update_dtm` VARCHAR(45) NULL,
+  `create_dtm` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `update_dtm` DATETIME NULL,
   `active` TINYINT NOT NULL DEFAULT 1,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `email_UNIQUE` (`email` ASC) VISIBLE,
@@ -77,7 +78,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `diet`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `diet` (
+CREATE TABLE IF NOT EXISTS `client_diet` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
   `meal1` VARCHAR(255) NULL,
@@ -104,7 +105,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `workout`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `workout` (
+CREATE TABLE IF NOT EXISTS `client_workout` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `dayofweek` VARCHAR(15) NOT NULL,
   `sets` INT NOT NULL,
