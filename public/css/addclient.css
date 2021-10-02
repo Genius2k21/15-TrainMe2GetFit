@@ -362,7 +362,7 @@ body {
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     margin-bottom: 22px;
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--shadow);
     margin: 0 45px 45px;
 }
 .inner .table-responsive .table {
@@ -375,19 +375,19 @@ body {
 .inner .table-responsive tr.space-row > th {
 	padding: 18px 28px;
     border-bottom: 1px solid;
-    border-bottom-color: rgba(255, 255, 255, 0.2);
+    border-bottom-color: var(--shadow);
 }
 .inner .table-responsive tr.space-row:last-child > td,
 .inner .table-responsive tr.space-row:last-child > th {
 	border-bottom: none;
 }
 .inner .table-responsive tbody th {
-	color: var(--grey);
+	color: var(--light);
 	font-size: 16px;
 	font-weight: 400;
 	width: 29%;
     border-right: 1px solid;
-    border-right-color: rgba(255, 255, 255, 0.2);
+    border-right-color: var(--shadow);
 }
 .inner .table-responsive tbody td {
 	color: var(--white);
@@ -552,7 +552,7 @@ body {
 	}
 	.inner .table-responsive tr.space-row {
 		border-bottom: 1px solid;
-		border-bottom-color: rgba(255, 255, 255, 0.2);
+		border-bottom-color: var(--shadow);
 	}
 	.inner .table-responsive tr.space-row:last-child {
 		border-bottom: none;
