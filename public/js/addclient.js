@@ -34,3 +34,7 @@ $(function(){
         }
     });
 });
+
+$('.datepicker').datepicker();
+
+
