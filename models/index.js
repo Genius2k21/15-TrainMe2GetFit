@@ -1,5 +1,11 @@
 const User = require('./User');
-const UserClient = require('./UserClient');
+const Client = require('./Client');
+const ClientDiet = require('./ClientDiet');
+const ClientLog = require('./ClientLog');
+const ClientProfile = require('./ClientProfile');
+const ClientWorkout = require('./ClientWorkout');
+const Exercise = require('./Exercise');
 
 
-module.exports = { User, UserClient };
+module.exports = { User, Client, ClientDiet, ClientLog, ClientProfile, ClientWorkout, Exercise };
+
