@@ -20,11 +20,11 @@ body {
 }
 .wizard-v5-content   {
 	width: 851px;
-	box-shadow: 0px 8px 20px 0px var(--shadow));
-	-o-box-shadow: 0px 8px 20px 0px var(--shadow));
-	-ms-box-shadow: 0px 8px 20px 0px var(--shadow));
-	-moz-box-shadow: 0px 8px 20px 0px var(--shadow));
-	-webkit-box-shadow: 0px 8px 20px 0px var(--shadow));
+	box-shadow: 0px 8px 20px 0px var(--shadow);
+	-o-box-shadow: 0px 8px 20px 0px var(--shadow);
+	-ms-box-shadow: 0px 8px 20px 0px var(--shadow);
+	-moz-box-shadow: 0px 8px 20px 0px var(--shadow);
+	-webkit-box-shadow: 0px 8px 20px 0px var(--shadow);
 	border-radius: 10px;
 	-o-border-radius: 10px;
 	-ms-border-radius: 10px;
@@ -40,7 +40,7 @@ body {
 }
 .wizard-v5-content .wizard-form {
 	width: 100%;
-	background: #525575;
+	background: var(--light-ultramarine_blue);
 	border-radius: 10px;
 	-o-border-radius: 10px;
 	-ms-border-radius: 10px;
@@ -49,7 +49,7 @@ body {
 }
 .form-register .steps {
 	margin-bottom: 35px;
-	background: var(--light);
+	background: var(--ultramarine_blue);
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
 }
@@ -189,7 +189,7 @@ body {
     top: 57%;
     right: 10%;
     font-size: 19.2px;
-    color:var(--dark_liver);
+    color:var(--medium_slate_blue);
 }
 .inner .form-row .form-holder.form-holder-2 {
 	width: 100%;
@@ -254,19 +254,19 @@ body {
 }
 .inner .form-row .form-holder input::placeholder,
 .inner .form-row .form-holder.form-holder-2 .input-step-2-1::placeholder {
-    color: var(--grey);
+    color: var(--pink_lavender);
     font-size: 16px;
     font-weight: 600;
 }
 .inner .form-row .form-holder input:-ms-input-placeholder,
 .inner .form-row .form-holder.form-holder-2 .input-step-2-1:-ms-input-placeholder { /* Internet Explorer 10-11 */
-   color: var(--grey);
+   color: var(--pink_lavender);
    font-size: 16px;
    font-weight: 600;
 }
 .inner .form-row .form-holder input::-ms-input-placeholder,
 .inner .form-row .form-holder.form-holder-2 .input-step-2-1::-ms-input-placeholder { /* Microsoft Edge */
-   color: var(--grey);
+   color: var(--pink_lavender);
    font-size: 16px;
    font-weight: 600;
 }
@@ -290,19 +290,19 @@ body {
 }
 .inner .form-row .form-holder .input-step-2::placeholder,
 .inner .form-row .form-holder.form-holder-2 .input-step-2-2::placeholder {
-    color: var(--dark);
+    color: var(--pink_lavender);
     font-size: 16px;
     font-weight: 600;
 }
 .inner .form-row .form-holder .input-step-2:-ms-input-placeholder,
 .inner .form-row .form-holder.form-holder-2 .input-step-2-2:-ms-input-placeholder { /* Internet Explorer 10-11 */
-   color: var(--dark);
+   color: var(--pink_lavender);
    font-size: 16px;
    font-weight: 600;
 }
 .inner .form-row .form-holder .input-step-2::-ms-input-placeholder,
 .inner .form-row .form-holder.form-holder-2 .input-step-2-2::-ms-input-placeholder { /* Microsoft Edge */
-   color: var(--dark);
+   color: var(--pink_lavender);
    font-size: 16px;
    font-weight: 600;
 }
@@ -312,7 +312,7 @@ body {
     margin-bottom: -1px;
 }
 .inner .form-row .form-holder select {
-    background: var(--light) url('../images/wizard_v5_icon.png') no-repeat scroll;
+    background: var(-light) url('../images/wizard_v5_icon.png') no-repeat scroll;
     background-position: right 16px center;
     z-index: 1;
     cursor: pointer;
@@ -438,7 +438,7 @@ body {
     cursor: pointer;
 }
 .actions ul li:hover {
-	background: var(--medium_slate_blue);
+	background: var(--pink_lavender);
 }
 .actions ul li a {
 	color: var(--light);
