@@ -257,7 +257,7 @@ iframe {
   width: 100%;
   font-family: Poppins-Bold;
   font-size: 39px;
-  color: #333333;
+  color: var(--ultramarine_blue);
   line-height: 1.2;
   text-align: left;
 }
@@ -270,14 +270,14 @@ iframe {
 .wrap-input100 {
   width: 100%;
   position: relative;
-  border-bottom: 2px solid #dbdbdb;
+  border-bottom: 2px solid var(--languid_lavender);
   margin-bottom: 45px;
 }
 
 .label-input100 {
   font-family: Poppins-SemiBold;
   font-size: 18px;
-  color: #999999;
+  color: var(--grey);
   line-height: 1.2;
   padding-left: 2px;
 }
@@ -289,7 +289,7 @@ iframe {
   background: transparent;
   font-family: Poppins-Regular;
   font-size: 22px;
-  color: #555555;
+  color:var(--dark_liver);
   line-height: 1.2;
   padding: 0 2px;
 }
@@ -318,11 +318,11 @@ iframe {
   -moz-transition: all 0.4s;
   transition: all 0.4s;
 
-  background: #d5007d;
-  background: -webkit-linear-gradient(45deg, #d5007d, #e53935);
-  background: -o-linear-gradient(45deg, #d5007d, #e53935);
-  background: -moz-linear-gradient(45deg, #d5007d, #e53935);
-  background: linear-gradient(45deg, #d5007d, #e53935);
+  background: var(--medium_slate_blue);
+  background: -webkit-linear-gradient(45deg, var(--pacific_blue), var(--medium_sea_green));
+  background: -o-linear-gradient(45deg, var(--pacific_blue), var(--medium_sea_green));
+  background: -moz-linear-gradient(45deg, var(--pacific_blue), var(--medium_sea_green));
+  background: linear-gradient(45deg, var(--pacific_blue), var(--medium_sea_green));
 }
 
 
@@ -367,7 +367,7 @@ iframe {
   width: 16px;
   height: 16px;
   border-radius: 2px;
-  background: #e6e6e6;
+  background:var(--languid_lavender);
   left: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -378,7 +378,7 @@ iframe {
 }
 
 .input-checkbox100:checked + .label-checkbox100::before {
-  color: #c87ef0;
+  color: var(--ultramarine_blue);
 }
 
 /*------------------------------------------------------------------
