@@ -1,5 +1,17 @@
 
+:root{
+  --dark: #000000;
+  --light: #FFFFFF;
+  --grey: #666666;
+  --dark_liver: #554348;
+  --languid_lavender: #DDCAD9;
+  --pink_lavender: #D1B1CB;
+  --medium_slate_blue: #6665DD;
+  --pacific_blue: #00B2CA;
+  --medium_sea_green: #58BC82;
+  --ultramarine_blue: #2667FF;
 
+}
 
 
 /*//////////////////////////////////////////////////////////////////
@@ -44,7 +56,7 @@ a {
 	font-family: Poppins-Regular;
 	font-size: 14px;
 	line-height: 1.7;
-	color: #666666;
+	color:var(--grey);
 	margin: 0px;
 	transition: all 0.4s;
 	-webkit-transition: all 0.4s;
@@ -69,7 +81,7 @@ p {
 	font-family: Poppins-Regular;
 	font-size: 14px;
 	line-height: 1.7;
-	color: #666666;
+	color: var(--languid_lavender);
 	margin: 0px;
 }
 
@@ -146,26 +158,26 @@ iframe {
 .txt1 {
   font-family: Poppins-Regular;
   font-size: 15px;
-  color: #999999;
+  color: var(--grey);
   line-height: 1.4;
 }
 
 .txt2 {
   font-family: Poppins-Regular;
   font-size: 15px;
-  color: #666666;
+  color: var(--grey);
   line-height: 1.4;
 }
 
 .txt3 {
   font-family: Poppins-Regular;
   font-size: 16px;
-  color: #666666;
+  color: var(--grey);
   line-height: 1.4;
 }
 
 .hov1:hover {
-  color: #c87ef0;
+  color: var(--medium_slate_blue);
 }
 
 
@@ -193,7 +205,7 @@ iframe {
 .wrap-login100 {
   width: 520px;
   min-height: 100vh;
-  background: #fff;
+  background: var(--white);
   border-radius: 2px;
   position: relative;
 }
@@ -218,11 +230,11 @@ iframe {
   height: 100%;
   top: 0;
   left: 0;
-  background: #e8519e;
-  background: -webkit-linear-gradient(bottom, #e8519e, #c77ff2);
-  background: -o-linear-gradient(bottom, #e8519e, #c77ff2);
-  background: -moz-linear-gradient(bottom, #e8519e, #c77ff2);
-  background: linear-gradient(bottom, #e8519e, #c77ff2);
+  background: var(--pink_lavender);
+  background: -webkit-linear-gradient(bottom, var(--dark_liver), var(--languid_lavender));
+  background: -o-linear-gradient(bottom, var(--dark_liver), var(--languid_lavender));
+  background: -moz-linear-gradient(bottom, var(--dark_liver), var(--languid_lavender));
+  background: linear-gradient(bottom, var(--dark_liver), var(--languid_lavender));
   opacity: 0.8;
 }
 
