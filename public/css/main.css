@@ -2,6 +2,8 @@
 :root{
   --dark: #000000;
   --light: #FFFFFF;
+  --light-grey: #a7acb6;
+  --shadow: rgba(0, 0, 0, 0.15);
   --grey: #666666;
   --dark_liver: #554348;
   --languid_lavender: #DDCAD9;
@@ -9,6 +11,8 @@
   --medium_slate_blue: #6665DD;
   --pacific_blue: #00B2CA;
   --medium_sea_green: #58BC82;
+  --trans_medium_sea_green: #58bc827c;
+  --alert_pink: #da0669;
   --ultramarine_blue: #2667FF;
 
 }
@@ -127,15 +131,15 @@ textarea:focus:-moz-placeholder { color:transparent; }
 textarea:focus::-moz-placeholder { color:transparent; }
 textarea:focus:-ms-input-placeholder { color:transparent; }
 
-input::-webkit-input-placeholder {color: #cccccc;}
-input:-moz-placeholder {color: #cccccc;}
-input::-moz-placeholder {color: #cccccc;}
-input:-ms-input-placeholder {color: #cccccc;}
+input::-webkit-input-placeholder {color: var(--light-grey);}
+input:-moz-placeholder {color: var(--light-grey);}
+input::-moz-placeholder {color: var(--light-grey);}
+input:-ms-input-placeholder {color: var(--light-grey);}
 
-textarea::-webkit-input-placeholder {color: #cccccc;}
-textarea:-moz-placeholder {color: #cccccc;}
-textarea::-moz-placeholder {color: #cccccc;}
-textarea:-ms-input-placeholder {color: #cccccc;}
+textarea::-webkit-input-placeholder {color: var(--light-grey);}
+textarea:-moz-placeholder {color: var(--light-grey);}
+textarea::-moz-placeholder {color: var(--light-grey);}
+textarea:-ms-input-placeholder {color: var(--light-grey);}
 
 /*---------------------------------------------*/
 button {
