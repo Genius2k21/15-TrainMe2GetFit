@@ -30,6 +30,9 @@ router.get("/clientView", (req, res) => {
     res.render('clientView');
 });
 
+router.get("/addclient", (req, res) => {
+    res.render('addClient');
+});
 
 
 module.exports = router;
