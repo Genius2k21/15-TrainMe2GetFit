@@ -207,6 +207,7 @@ iframe {
   width: calc(100% - 520px);
   position: relative;
   z-index: 1;
+  background-image: ;
 }
 
 .login100-more::before {
@@ -530,4 +531,8 @@ iframe {
     padding-left: 15px;
     padding-right: 15px;
   }
+}
+
+.cust-carousel-one{
+  background-image: url('./public/images/Trainer_Images/squat_instruct.png');
 }
