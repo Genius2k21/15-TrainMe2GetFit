@@ -9,12 +9,14 @@
   --languid_lavender: #DDCAD9;
   --pink_lavender: #D1B1CB;
   --medium_slate_blue: #6665DD;
+  --trans_medium_slate_blue: #6765dd8f;
+
   --pacific_blue: #00B2CA;
   --medium_sea_green: #58BC82;
   --trans_medium_sea_green: #58bc827c;
   --alert_pink: #da0669;
   --ultramarine_blue: #2667FF;
-  --light-ultramarine_blue: #26afffe1;
+  --light-ultramarine_blue: #26afffca;
 }
 
 
@@ -162,21 +164,21 @@ iframe {
 .txt1 {
   font-family: Poppins-Regular;
   font-size: 15px;
-  color: var(--grey);
+  color: var(--bs-gray-100);
   line-height: 1.4;
 }
 
 .txt2 {
   font-family: Poppins-Regular;
   font-size: 15px;
-  color: var(--grey);
+  color: var(--bs-gray-100);
   line-height: 1.4;
 }
 
 .txt3 {
   font-family: Poppins-Regular;
   font-size: 16px;
-  color: var(--grey);
+  color: var(--bs-gray-100);
   line-height: 1.4;
 }
 
@@ -209,7 +211,7 @@ iframe {
 .wrap-login100 {
   width: 520px;
   min-height: 100vh;
-  background: var(--white);
+  background: var(--medium_slate_blue);
   border-radius: 2px;
   position: relative;
 }
@@ -223,7 +225,6 @@ iframe {
   width: calc(100% - 520px);
   position: relative;
   z-index: 1;
-  background-image: ;
 }
 
 .login100-more::before {
@@ -265,6 +266,7 @@ iframe {
   color: var(--ultramarine_blue);
   line-height: 1.2;
   text-align: left;
+  background-color: var(--light);
 }
 
 
@@ -277,12 +279,15 @@ iframe {
   position: relative;
   border-bottom: 2px solid var(--languid_lavender);
   margin-bottom: 45px;
+  background-color: var(--light);
+  padding: .5%;
+  margin: 1.5%;
 }
 
 .label-input100 {
   font-family: Poppins-SemiBold;
   font-size: 18px;
-  color: var(--grey);
+  color: var(--languid_lavender);
   line-height: 1.2;
   padding-left: 2px;
 }
@@ -294,7 +299,7 @@ iframe {
   background: transparent;
   font-family: Poppins-Regular;
   font-size: 22px;
-  color:var(--dark_liver);
+  color:var(--dark);
   line-height: 1.2;
   padding: 0 2px;
 }
@@ -436,17 +441,20 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 0 20px;
-  min-width: 244px;
   height: 50px;
-
+  width: 200px;
   font-family: Poppins-Medium;
   font-size: 16px;
-  color: #fff;
+  color: var(--light);
   line-height: 1.2;
+  background-color: var(--shadow);
+  border-radius: 35px;
 }
 
 .wrap-login100-form-btn:hover .login100-form-bgbtn {
   bottom: 0;
+  cursor: pointer;
+  color: var(--medium_slate_blue);
 }
 
 
@@ -461,7 +469,7 @@ iframe {
   content: attr(data-validate);
   position: absolute;
   max-width: 70%;
-  background-color: #fff;
+  background-color: var(--light);
   border: 1px solid #c80000;
   border-radius: 2px;
   padding: 4px 30px 4px 10px;
@@ -550,5 +558,15 @@ iframe {
 }
 
 .cust-carousel-one{
-  background-image: url('./public/images/Trainer_Images/squat_instruct.png');
+  background-image: url('/public/images/Trainer_Images/stationary_bike_instruct.png');
+}
+.cust-carousel-two{
+  background-image: url('/images/Trainer_Images/pushup_instruct.png');
+}
+.cust-carousel-three{
+  background-image: url('/images/Trainer_Images/asks_instructor.png');
+}
+
+.cust-carousel-icon{
+  color: var(--pink_lavender)
 }
