@@ -4,7 +4,9 @@ const { Client, User } = require('../../models');
 
 //GET client information for user and client 
 router.get('/:userid',async(req,res) =>{
-
+   try{
+      res.render("dashboard")
+ 
     const userid = req.params.userid;
 
     sequelize.query('CALL sp_getClients(:userid)',{replacements: {userid: userid}}).then(function(response){
@@ -13,6 +15,9 @@ router.get('/:userid',async(req,res) =>{
           res.json(err);
    });
 
+   } catch (err){
+      res.status(500).json(err);
+   }
 
 })
 

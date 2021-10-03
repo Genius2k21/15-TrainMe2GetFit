@@ -29,6 +29,9 @@ router.get("/dashboard", (req, res) => {
     res.render('dashboard');
 });
 
+router.get("/addclient", (req, res) => {
+    res.render('addClient');
+});
 
 
 module.exports = router;
