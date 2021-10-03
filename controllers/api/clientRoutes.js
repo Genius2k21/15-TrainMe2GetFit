@@ -2,9 +2,10 @@ const router = require('express').Router();
 const sequelize = require('../../config/connection');
 const { Client, User} = require('../../models');
 
+
+
 //GET client information for user and client 
 router.get('/clientprofile/:clientid/user/:userid', async(req,res) =>{
-
     const clientid = req.params.clientid;
     const userid = req.params.userid;
 
