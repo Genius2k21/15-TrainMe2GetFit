@@ -17,7 +17,11 @@ const loginFormHandler = async (event) => {
       });
   
       if (response.ok) {
+<<<<<<< HEAD
         // If successful, redirect the browser to the dashboard page
+=======
+        // If successful, redirect the browser to the profile page
+>>>>>>> main
         document.location.replace('/dashboard');
       } else {
         alert(response.statusText);
