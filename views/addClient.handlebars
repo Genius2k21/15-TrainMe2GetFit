@@ -33,10 +33,23 @@
 						<input type="radio" name="gender" value="female"> Female
 					</div>
 				</div>
-					<div class="form-row">
+				<div class="form-row">
+					<div class="form-holder form-holder-3">
+						<label for="phone">Phone Number</label>
+						<input type="text" placeholder="+1 777-888-8888" class="form-control" id="phone" name="phone">
+					</div>
+				</div>
+				<div class="form-row">
 					<div class="form-holder form-holder-2">
 						<label for="email">Email Address:</label>
 						<input type="email" name="email" class="email input-step-2-1" id="email" placeholder="ex: example@email.com" pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}">
+					</div>
+				</div>
+			<div class="form-row date">
+					<div class="form-holder form-holder-2 date" data-provide="datepicker-inline">
+						<label for="birthdate" class="special-label">Date of Birth:</label>
+							<input type="text" class="form-control" id="birthdate">
+								<span class="glyphicon glyphicon-th"></span>
 					</div>
 				</div>
 				<div class="form-row">
@@ -47,39 +60,21 @@
 				<div class="form-row">
 					<div class="form-holder form-holder-2">
 						<label for="address_line_2">Address Line 2</label>
-						<input type="text" placeholder="Apt 22" class="form-control" id="address_line_2" 
+						<input type="text" placeholder="Apt 22" class="form-control" id="address_line_2"/> 
 					</div>
 				</div>
 				<div class="form-row">
 					<div class="form-holder form-holder-2">
 						<label for="city">City</label>
-						<input type="text" placeholder=" South Tobinchester" class="form-control" id="city" name="city">
+						<input type="text" placeholder="South Tobinchester" class="form-control" id="city" name="city">
 					</div>
 					<div class="form-holder form-holder-2">
 						<label for="state">State/Province</label>
 						<input type="text" placeholder="UT" class="form-control" id="state" name="state">
 					</div>
 					<div class="form-holder">
-						<label for="code">Zip Code</label>
-						<input type="text" class="form-control" id="code" name="code">
-					</div>
-				</div>
-				<div class="form-row">
-					<div class="form-holder form-holder-3">
-						<label for="phone">Phone Number</label>
-						<input type="text" placeholder="+1 777-888-8888" class="form-control" id="phone" name="phone">
-					</div>
-					
-				</div>
-				<div class="form-row form-row-date">
-					<div class="form-holder form-holder-2">
-						<label for="birthdate" class="special-label">Date of Birth:</label>
-						<div class="input-group date" data-provide="datepicker-inline">
-							<input type="text" class="form-control" id="birthdate">
-							<div class="input-group-addon">
-								<span class="glyphicon glyphicon-th"></span>
-							</div>
-						</div>
+						<label for="zipcode">Zip Code</label>
+						<input type="text" class="form-control" id="zipcode" name="zipcode">
 					</div>
 				</div>
 			</div>
