@@ -54,7 +54,7 @@ npm install seeds
 
 ```
 
-### Usage:
+## Usage:
 
 A demonstration of MVC architecture using Javascript and SQL languages to promote an app for enterpernuers in the fitness industry that want a simple app to track and communicate with clients.
 
@@ -89,7 +89,7 @@ Updateable items: email, goal weight, workout, dietary, goals, location, comment
 Future feature Set Client as Inactive, "soft delete"
              
 
-## Licence:
+## License:
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
