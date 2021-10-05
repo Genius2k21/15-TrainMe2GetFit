@@ -6,35 +6,51 @@ const { Client, User } = require('../../models');
 //POST user information to create user account
 router.post('/' , async(req,res) =>{
 
+try{
+   
    // Log that a POST request was received
    const username = req.query.username;
    const password = req.query.password;
 
- sequelize.query('CALL sp_createUser(:username, :password)',{replacements: {username: username, password: password }}).then(function(response){
-      res.json(response);
-     }).error(function(err){
-        res.json(err);
-  });
+   sequelize.query('CALL sp_createUser(:username, :password)',{replacements: {username: username, password: password }}).then(function(response){
+         
+      req.session.save(() =>{
+         req.session.user_id = response.user_id;
+         req.session.logged_in = true;
 
-})
+         res.status(200).json(response);
+      })
+   });
+} catch (err){
+   res.status(400).json(err);
+}
+
+});
 
 
 //POST user information to create user account
 router.get('/login' , async(req,res) =>{
 
-   // Log that a POST request was received
-   //console.log(`${req.query.username} request received`);
+   try{
+      const username = req.query.username;
+      const password = req.query.password;
 
-   const username = req.query.username;
-   const password = req.query.password;
+      sequelize.query('CALL sp_getUser(:username, :password)',{replacements: {username: username, password: password }}).then(function(response){
+         
+         const userid  = response[0].user_id;
 
- sequelize.query('CALL sp_getUser(:username, :password)',{replacements: {username: username, password: password}}).then(function(response){
-      res.json(response);
-     }).error(function(err){
-        res.json(err);
-  });
+         res.redirect('../landing/'+ userid +'?username='+username);
 
-})
+         req.session.save(() =>{
+            req.session.user_id = userid;
+            req.session.logged_in = true;
+         })
+      });
+   } catch (err){
+      res.status(400).json(err);
+   }
+
+});
 
 
 //GET client information for user and client 

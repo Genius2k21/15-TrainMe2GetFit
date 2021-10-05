@@ -34,5 +34,8 @@ router.get("/addclient", (req, res) => {
     res.render('addClient');
 });
 
+router.get("/landing", (req, res) => {
+    res.render('landing');
+});
 
 module.exports = router;

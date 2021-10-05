@@ -4,7 +4,7 @@ const sequelize = require('../config/connection');
 class Client extends Model {}
 
 Client.init({
-    id: {
+    client_id: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
