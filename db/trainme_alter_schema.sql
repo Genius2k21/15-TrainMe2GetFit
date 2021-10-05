@@ -9,3 +9,14 @@ BEGIN
     WHERE username = username
     AND password = password;
 END
+
+
+
+DROP PROCEDURE IF EXISTS sp_getClient
+
+CREATE PROCEDURE sp_getClient(IN userid INT, IN clientid INT)
+BEGIN
+	SELECT * FROM client 
+    WHERE id = clientid 
+    AND user_id = userid;
+END 

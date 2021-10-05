@@ -2,6 +2,18 @@ const router = require('express').Router();
 const sequelize = require('../../config/connection');
 const { Client, User} = require('../../models');
 
+//GET client diet for client
+router.get('/:clientid',async(req,res) =>{
+
+    const clientid = req.params.clientid;
+    const userid = req.params.userid;
+
+    sequelize.query('CALL sp_getClient(:userid,:clientid)',{replacements: {userid: userid, clientid: clientid}}).then(function(response){
+        res.json(response);
+       }).error(function(err){
+          res.json(err);
+   });
+})
 
 
 //GET client information for user and client 
