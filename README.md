@@ -16,23 +16,80 @@ https://git.heroku.com/thawing-plains-88103.git
 
 
 ## Installation:
+
+From no clone, build on own. Assumes NodeJS has been installed on machine.
+
 ```
 
 npm init
 
+```
+Follow prompts.
+
+```
 npm install mysql2
 
 npm install express
 
+npm install express-handlebars
+
+npm install express-session
+
 npm install sequelize
+
+npm install connect-session-sequelize
+
+npm install bcrypt
 
 ```
 
-### Usage:
-Add details on how to use
+For security use dotenv to protect credentials. Seeds for clone and generic data.
+
+```
+
+npm install dotenv
+
+npm install seeds
+
+
+```
+
+## Usage:
+
+A demonstration of MVC architecture using Javascript and SQL languages to promote an app for enterpernuers in the fitness industry that want a simple app to track and communicate with clients.
+
+#### User Story:
+
+As a personal trainer I want to be able to create new clients
+As a personal trainer I want to be able to login to see my list of clients
+SO THAT I may track their progress
+AS a personal trainer I want to be able to update client information
+SO THAT progress is marked and support based on data 
+As a personal trainer I want to be able to delete clients
+SO that do not continue to show up in dashboard
+As a personal trainer I want to be able to send clients notes via preferred method of email or SMS
+SO that the client is free to use preference outside of APP
+As a personal trainer I want to be able to assign workouts to clients for different days of the week
+SO that the client is supported in working towards their goals.
+As a personal trainer I want to be able to update workouts for clients
+SO that they feel engagement and strive to meet their goals
+As a personal trainer I want to be able to create a client diet
+As a personal trainer I want to be able to login and click on a client profile and see their workout and diet
+SO that I may anaylze their progress and help client reach personal goals
+As a personal trainer I want to be able to add a additional workout or diet information
+SO that I may continue to grow and improve.
+
+
+#### Structure:
+
+Clients :First name, last name, age(birthdate) (auto update by date??), height, initial weight, email, phone number (okay to receive texts??), initial start date saved by automation
+
+Updateable items: email, goal weight, workout, dietary, goals, location, comments
+
+Future feature Set Client as Inactive, "soft delete"
              
 
-## Licence:
+## License:
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 

@@ -1,0 +1,19 @@
+[
+	{
+		"id":"4",
+		"username":"demo",
+		"email":"demo@demo.com",
+		"password":"password",
+		"user_type":"trainer",
+		"active":"1"
+	},
+	{
+		"id":"3",
+		"username":"test",
+		"email":"test@demo.com",
+		"password":"password",
+		"user_type":"trainer",
+		"active":"1"
+	}
+]
+

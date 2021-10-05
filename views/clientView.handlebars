@@ -1,0 +1,180 @@
+<div class="container clientView">
+    <div class="main-body">
+    
+          <!-- Breadcrumb -->
+          <nav aria-label="breadcrumb" class="main-breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/dashboard">Dashboard</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Client Profile</li>
+            </ol>
+          </nav>
+          <!-- /Breadcrumb -->
+    
+          <div class="row gutters-sm">
+            <div class="col-md-4 mb-3">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex flex-column align-items-center text-center">
+                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
+                    <div class="mt-3">
+                      <h4>{{client.first_name}} {{client.last_name}}</h4>
+                      <button class="btn btn-outline-primary">Message</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mt-3">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                    <h6>Diet</h6>
+                    <span class="text-secondary">{{diet.name}}</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                    <h6>Meals</h6>
+                        <ul class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                            {{meal1}} 
+                            ---
+                            {{meal2}}
+                        </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Full Name</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      {{client.first_name}} {{client.last_name}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Email</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      {{client.email}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Phone</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      {{client.phone}}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Address</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      {{client.address_line_1}} {{client.address_line_2}} 
+                      {{client.city}}, {{client.state}} {{client.zip}}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row gutters-sm">
+                <div class="col-md-8">
+                  <div class="card mb-3">
+                    <div class="card-body">
+                      <small>Client Information</small>
+                      <div>
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">Height</th>
+                                <th scope="col">Weight</th>
+                                <th scope="col">Goal Weight</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td>{{client_profile.height}}</td>
+                                    <td>{{client_profile.weight}}</td>
+                                    <td>{{client_profile.goal_weight}}</td>
+                                </tr>
+                            </tbody>
+                            <thread>
+                                <tr>
+                                    <th scope="col">Shoulders</th>
+                                    <th scope="col">Chest</th>
+                                    <th scope="col">Waist</th>
+                                    <th scope="col">Hips</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td>{{client_profile.shoulders}}</td>
+                                    <td>{{client_profile.chest}}</td>
+                                    <td>{{client_profile.waist}}</td>
+                                    <td>{{client_profile.hips}}</td>
+                                </tr>
+                            </tbody>
+                            <thread>
+                                <tr>
+                                    <th scope="col">Left Thigh</th>
+                                    <th scope="col">Right Thigh</th>
+                                    <th scope="col">Left Calf</th>
+                                    <th scope="col">Right Calf</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row"></th>
+                                    <td>{{client_profile.left_thigh}}</td>
+                                    <td>{{client_profile.right_thigh}}</td>
+                                    <td>{{client_profile.left_calf}}</td>
+                                    <td>{{client_profile.right_calf}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 mb-3">
+                  <div class="card h-100">
+                    <div class="card-body">
+                      <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2">assignment</i>Project Status</h6>
+                      <small>Web Design</small>
+                      <div class="progress mb-3" style="height: 5px">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <small>Website Markup</small>
+                      <div class="progress mb-3" style="height: 5px">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <small>One Page</small>
+                      <div class="progress mb-3" style="height: 5px">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <small>Mobile Template</small>
+                      <div class="progress mb-3" style="height: 5px">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                      <small>Backend API</small>
+                      <div class="progress mb-3" style="height: 5px">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+          </div>
+
+        </div>
+    </div>
