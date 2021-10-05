@@ -593,3 +593,12 @@ body {
 .required{
 	box-shadow: 2px 5px var(--bs-red);
 }
+
+.cust-btn{
+	background-color: var(--pink_lavender);
+	color: var(--ultramarine_blue);
+}
+.cust-btn :hover{
+	background-color: var(--dark_liver);
+	color: var(--alert_pink);
+}
