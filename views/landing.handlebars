@@ -1,4 +1,9 @@
-<div id="#landing" class="container" >
+<div id="landing" class="container" >
+    <div class="d-flex flex-row-reverse p-2 bd-highlight"><span id="time">Last login: 10/04/2021 09:14AM</span></div>
+    <div><h2>Welcome {{username}}!</h2></div>
+    <br>
+    <br>
+    <div><h4>Current Client Roster</h4></div>
     <div class="row">
         <table class="table table-striped table-hover">
             <thead>
@@ -6,28 +11,76 @@
                 <th scope="col">#</th>
                 <th scope="col">First</th>
                 <th scope="col">Last</th>
-                <th scope="col">Handle</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Last Checkin</th>
+                <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                </tr>
-                <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                </tr>
-                <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-                </tr>
+                {{#each clients}}
+                    <tr>
+                        <th scope="row">{{this.client_id}}</th>
+                        <td>{{this.first_name}}</td>
+                        <td>{{this.last_name}}</td>
+                        <td>{{this.email}}</td>
+                        <td>{{this.phone}}</td>
+                        <td>{{formatDate this.create_dtm}}</td>
+                        <td><button id="edit" type="button" class="btn btn-secondary btn-sm" data-clientid={{this.client_id}}>Edit</button></td>
+                    </tr>
+                {{/each}}
             </tbody>
         </table>
     </div>
+    <div>
+        <button id="add-client" type="button" class="btn btn-success">Add Client</button>
+    </div>
 </div>
+<br>
+<div>
+    <canvas id="myChart" width="200" height="100"></canvas>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-steps/1.1.0/jquery.steps.min.js" integrity="sha512-bE0ncA3DKWmKaF3w5hQjCq7ErHFiPdH2IGjXRyXXZSOokbimtUuufhgeDPeQPs51AI4XsqDZUK7qvrPZ5xboZg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="./js/landing.js"></script>
+
+<script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['June', 'July', 'August', 'September', 'October'],
+                datasets: [{
+                    label: 'Weight',
+                    data: [210, 200, 205, 189, 182],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>

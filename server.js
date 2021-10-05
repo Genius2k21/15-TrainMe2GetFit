@@ -8,12 +8,16 @@ const routes = require('./controllers');
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
+// Import the custom helper methods
+const helpers = require('./utils/helper');
+
+
 const app = express();
 const PORT = process.env.PORT || 3009;
 
 // Set up Handlebars.js engine with custom helpers
-//const hbs = exphbs.create({ helpers });
-const hbs = exphbs.create({ });
+const hbs = exphbs.create({ helpers });
+//const hbs = exphbs.create({ });
 
 const sess = {
   secret: 'Super secret secret',

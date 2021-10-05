@@ -16,7 +16,7 @@ ClientProfile.init({
       primaryKey: true,
       references: {
         model: 'client',
-        key: 'id'
+        key: 'client_id'
       }
     },
     client_user_id: {

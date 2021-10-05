@@ -35,13 +35,15 @@ router.get('/login' , async(req,res) =>{
       const username = req.query.username;
       const password = req.query.password;
 
-      sequelize.query('CALL sp_createUser(:username, :password)',{replacements: {username: username, password: password }}).then(function(response){
-            
-         req.session.save(() =>{
-            req.session.user_id = response.user_id;
-            req.session.logged_in = true;
+      sequelize.query('CALL sp_getUser(:username, :password)',{replacements: {username: username, password: password }}).then(function(response){
+         
+         const userid  = response[0].user_id;
 
-            res.status(200).json(response);
+         res.redirect('../landing/'+ userid +'?username='+username);
+
+         req.session.save(() =>{
+            req.session.user_id = userid;
+            req.session.logged_in = true;
          })
       });
    } catch (err){
