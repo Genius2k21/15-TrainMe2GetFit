@@ -2,6 +2,23 @@ const router = require('express').Router();
 const sequelize = require('../../config/connection');
 const { Client, User} = require('../../models');
 
+//GET client profile for client
+router.get('/:userid/:clientid', async(req,res) =>{
+        const clientid = req.params.clientid;
+        const userid = req.params.userid;
+
+        sequelize.query('CALL sp_getClient(:userid,:clientid)',{replacements: {userid: userid, clientid: clientid}})
+            .then(function(response){
+            
+                const client = response;
+                console.log(client);
+            
+                    res.status(200).json(response);
+                })
+            .catch(function(err){
+                    res.status(400).json(err);
+            });
+})
 
 
 //GET client information for user and client 
