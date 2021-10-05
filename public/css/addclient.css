@@ -209,8 +209,14 @@ body {
 .inner .form-row .form-holder label {
 	color: var(--light);
 	padding-bottom: 10px;
-	display: block;
+
 }
+
+.cust-label {
+	color: var(--light);
+	padding-bottom: 10px;
+}
+
 .inner .form-row .form-holder label.special-label {
     display: inline-block;
     float: left;
@@ -572,3 +578,18 @@ body {
 	}
 	
 } 
+
+.inner .form-row .form-holder-5{
+	width: 33%;
+}
+.inner .form-row .form-holder-6{
+	width: 25%;
+}
+
+.form-holder-cust-holder{
+	width: 12.5%
+}
+
+.cust-form-row{
+	
+}
