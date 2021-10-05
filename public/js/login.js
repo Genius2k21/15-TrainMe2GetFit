@@ -2,6 +2,8 @@ const userData = require('../../seeds/user-data.json')
 
 const loginFormHandler = async (event) => {
     event.preventDefault();
+
+    console.log("test")
   
     // Collect values from the login form
     const username = document.querySelector('#username').value.trim();
