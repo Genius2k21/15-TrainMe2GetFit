@@ -1,5 +1,3 @@
-debugger
-
 /**
  * Out of the box function for wizard functionality
  */
@@ -20,48 +18,95 @@ $(function(){
         },
         onStepChanging: function (event, currentIndex, newIndex) { 
             event.preventDefault();
-            const firstName = $('#first_name').val() 
-            const lastName = $('#last_name').val();
-            const email = $('#email').val();
-            const phone = $('#phone').val();
-            const streetAddress1 = $('#address_line_1').val();
-            const streetAddress2 = $('#address_line_2').val();
-            const city = $('#city').val();
-            const state = $('#state').val();
-            const zipcode = $('#zipcode').val();
+            const firstName = document.querySelector('#first_name');
+            const lastName = document.querySelector('#last_name');
+            const email = document.querySelector('#email');
+            const phone = document.querySelector('#phone');
+            const streetAddress1 = document.querySelector('#address_line_1');
+            const streetAddress2 = document.querySelector('#address_line_2');
+            const city = document.querySelector('#city');
+            const state = document.querySelector('#state');
+            const zipcode = document.querySelector('#zipcode');
             const gender = $('form input[type=radio]:checked').val();
-            const height_ft = $('#height_ft').val();
-            const height_in = $('#height_in').val();
-            const weight = $('#weight').val();
-            const goal_weight = $('#goal_weight').val();
-            const shoulder = $('#shoulder').val();
-            const chest = $('#chest').val();
-            const waist = $('#waist').val();
-            const hips = $('#hips').val();
-            const left_thigh = $('#left_thigh').val();
-            const right_thigh = $('#right_thigh').val();
-            const left_calf = $('#left_calf').val();
-            const right_calf = $('#right_calf').val();
+            const height_ft = document.querySelector('#height_ft');
+            const height_in = document.querySelector('#height_in');
+            const weight = document.querySelector('#weight');
+            const goal_weight = document.querySelector('#goal_weight');
+            const shoulder = document.querySelector('#shoulder');
+            const chest = document.querySelector('#chest');
+            const waist = document.querySelector('#waist');
+            const hips = document.querySelector('#hips');
+            const left_thigh = document.querySelector('#left_thigh');
+            const right_thigh = document.querySelector('#right_thigh');
+            const left_calf = document.querySelector('#left_calf');
+            const right_calf = document.querySelector('#right_calf');
 
-            const fullname = firstName+' '+lastName;
+            console.log(`what is the event? ${event}`)
+
+            if(currentIndex === 0){
+                let flag = true;
+                if(firstName.value === ''){
+                    console.log('First name is required');
+                    firstName.classList.add('required');
+                    flag = false;
+                }
+                if(lastName.value === ''){
+                    console.log('Last name is required');
+                    lastName.classList.add('required');
+                    flag = false;
+                }
+                if(email.value === ''){
+                    console.log('email is required');
+                    email.classList.add('required');
+                    flag = false;
+                }
+                if(phone.value === ''){
+                    console.log('phone is required');
+                    phone.classList.add('required');
+                    flag = false;
+                }
+
+                return flag;
+            }
+           
+            if(currentIndex === 1){
+                if(weight.value === ''){
+                    console.log('weight is required');
+                    return false;
+                }
+                if(goal_weight.value === ''){
+                    console.log('goal_weight is required');
+                    return false;
+                }
+            }
+
+            const fullname = firstName.value.trim()+' '+lastName.value.trim();
 
             $('#fullname-val').text(fullname);
-            $('#email-val').text(email);
-            $('#phone-val').text(phone);
+            $('#email-val').text(email.value.trim());
+            $('#phone-val').text(phone.value.trim());
             $('#gender-val').text(gender);
-            $('#weight-val').text(weight);
-            $('#goal-weight-val').text(goal_weight);
+            $('#weight-val').text(weight.value.trim());
+            $('#goal-weight-val').text(goal_weight.value.trim());
 
             return true;      
         },
-        onsubmit: function(event, currentIndex, newIndex){
+        onFinish: function(event){
             event.preventDefault();
-            console.log('does this fire?')
-        }
+            console.log('does this fire?');
+        },
+        onclose: function(event){
+            event.preventDefault();
+            console.log('onclose?? does it fire?');
+        },
     });
 });
 
-
+// const onSubmit = async (event) => {
+//     event.preventDefault();
+//     console.log(event.target);
+//     console.log('how does this fire');
+// }
 
 const addClientHandler = async (event) => {
     // Stop the browser from submitting the form so we can do so with JavaScript

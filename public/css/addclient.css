@@ -590,6 +590,6 @@ body {
 	width: 12.5%
 }
 
-.cust-form-row{
-	
+.required{
+	box-shadow: 2px 5px var(--bs-red);
 }

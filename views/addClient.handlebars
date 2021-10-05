@@ -7,7 +7,7 @@
 <div class="page-content">
 <div class="wizard-v5-content">
 <div class="wizard-form">
-<form class="form-register" id="form-register" action="onSubmit" method="post">
+<form class="form-register" id="form-register" action="/js/addclient.js" method="post">
 <div id="form-total">
 	<!-- SECTION 1 -->
 	<h2>
@@ -19,11 +19,11 @@
 			<div class="form-row">
 				<div class="form-holder">
 					<label for="first_name">First Name</label>
-					<input type="text" placeholder="ex: Laura" class="form-control" id="first_name" name="first_name" required>
+					<input type="text" placeholder="ex: Laura" class="form-control" id="first_name" name="first_name" required />
 				</div>
 				<div class="form-holder">
 					<label for="last_name">Last Name</label>
-					<input type="text" placeholder="ex: Vaughn" class="form-control" id="last_name" name="last_name" required>
+					<input type="text" placeholder="ex: Vaughn" class="form-control" id="last_name" name="last_name" required />
 				</div>
 			</div>
 			<div class="form-row">
@@ -37,25 +37,25 @@
 				<div class="form-holder form-holder-3" data-provide="datepicker">
 				<label for="birthdate">Date of Birth:</label>
 				<div class='input-group date'>
-					<input id='birthdate' type='date' placeholder="MM-DD-YYYY" class="form-control" pattern="\d{1,2}/\d{1,2}/\d{4}" required>
+					<input id='birthdate' type='date' placeholder="MM-DD-YYYY" class="form-control" pattern="\d{1,2}/\d{1,2}/\d{4}" required />
          		</div>
 			</div>
 		<div class="form-holder form-holder-3">
 			<label for="phone">Phone Number</label>
-			<input type="tel" placeholder="+1 777-888-8888" class="form-control" id="phone" name="phone" required>
+			<input type="tel" placeholder="+1 777-888-8888" class="form-control" id="phone" name="phone" required />
 		</div>
 		</div>
 			<div class="form-row">
 				<div class="form-holder form-holder-2">
 					<label for="email">Email Address:</label>
-					<input type="email" name="email" class="email input-step-2-1" id="email" placeholder="ex: example@email.com" pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" required>
+					<input type="email" name="email" class="email input-step-2-1" id="email" placeholder="ex: example@email.com" pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" required />
 				</div>
 			</div>
 		
 			<div class="form-row">
 				<div class="form-holder form-holder-2">
 					<label for="address_line_1">Address Line 1</label>
-					<input type="text" placeholder="622 Dixie Path" class="form-control" id="address_line_1" name="address_line_1">
+					<input type="text" placeholder="622 Dixie Path" class="form-control" id="address_line_1" name="address_line_1" />
 				</div>
 			</div>
 			<div class="form-row">
@@ -67,15 +67,15 @@
 			<div class="form-row">
 				<div class="form-holder form-holder-5">
 					<label for="city">City</label>
-					<input type="text" placeholder="South Tobinchester" class="form-control" id="city" name="city">
+					<input type="text" placeholder="South Tobinchester" class="form-control" id="city" name="city" />
 				</div>
 				<div class="form-holder form-holder-5">
 					<label for="state">State/Province</label>
-					<input type="text" placeholder="UT" class="form-control" id="state" name="state">
+					<input type="text" placeholder="UT" class="form-control" id="state" name="state" />
 				</div>
 				<div class="form-holder form-holder-5">
 					<label for="zipcode">Zip Code</label>
-					<input type="number" class="form-control" id="zipcode" name="zipcode">
+					<input type="number" class="form-control" id="zipcode" name="zipcode" />
 				</div>
 			</div>
 		</div>
@@ -122,57 +122,57 @@
   <div class="form-group row">
     <label for="weight" class="col-3 col-form-label cust-label">Weight :</label> 
     <div class="col-8">
-      <input id="weight" name="weight" type="number" class="form-control" required>
+      <input id="weight" name="weight" type="number" class="form-control" required />
     </div>
   </div>
   <div class="form-group row">
     <label for="goal_weight" class="col-3 col-form-label cust-label">Goal Weight :</label> 
     <div class="col-8">
-      <input id="goal_weight" name="goal_weight" type="text" class="form-control" required>
+      <input id="goal_weight" name="goal_weight" type="text" class="form-control" required />
     </div>
   </div>
   <div class="form-group row">
     <label for="shoulder" class="col-3 col-form-label cust-label">Shoulders :</label> 
     <div class="col-8">
-      <input id="shoulder" name="shoulder" type="number" class="form-control">
+      <input id="shoulder" name="shoulder" type="number" class="form-control" />
     </div>
   </div>
   <div class="form-group row">
     <label for="chest" class="col-3 col-form-label cust-label">Chest :</label> 
     <div class="col-8">
-      <input id="chest" name="chest" type="number" class="form-control">
+      <input id="chest" name="chest" type="number" class="form-control" />
     </div>
   </div>
   <div class="form-group row">
     <label for="waist" class="col-3 col-form-label cust-label">Waist :</label> 
     <div class="col-8">
-      <input id="waist" name="waist" type="number" class="form-control">
+      <input id="waist" name="waist" type="number" class="form-control" />
     </div>
   </div>
   <div class="form-group row">
     <label for="hips" class="col-3 col-form-label cust-label">Hips :</label> 
     <div class="col-8">
-      <input id="hips" name="hips" type="number" class="form-control">
+      <input id="hips" name="hips" type="number" class="form-control" />
     </div>
   </div>
   <div class="form-group row">
     <label for="left_thigh" class="col-3 col-form-label cust-label">Left Thigh :</label> 
     <div class="col-3">
-      <input id="left_thigh" name="left_thigh" type="number" class="form-control">
+      <input id="left_thigh" name="left_thigh" type="number" class="form-control" />
     </div>
     <label for="right_thigh" class="col-3 col-form-label text-right cust-label">Right Thigh :</label> 
     <div class="col-3">
-      <input id="right_thigh" name="right_thigh" type="number" class="form-control">
+      <input id="right_thigh" name="right_thigh" type="number" class="form-control" />
     </div>
   </div>
   <div class="form-group row">
     <label for="left_calf" class="col-3 col-form-label cust-label">Left Calf :</label> 
     <div class="col-3">
-      <input id="left_calf" name="left_calf" type="number" class="form-control">
+      <input id="left_calf" name="left_calf" type="number" class="form-control" />
     </div>
     <label for="c" class="col-3 col-form-label text-right cust-label">Right Calf :</label> 
     <div class="col-3">
-      <input id="right_calf" name="right_calf" type="number" class="form-control">
+      <input id="right_calf" name="right_calf" type="number" class="form-control" />
     </div>
   </div> 
 </div>
@@ -216,7 +216,7 @@
 			</table>
 		</div>
 	</div>
-	
+	<button class="btn btn-block btn-success hidden">Register</button>
 </section>
 </div>
 </form>
