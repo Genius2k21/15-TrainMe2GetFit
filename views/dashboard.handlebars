@@ -1,27 +1,93 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Client Fitness Tracker</title>
-<script type="text/javascript" src="jscharts.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <title>Largest Municipalities in Puerto Rico</title>
 </head>
 <body>
-<div id="chart_container">Loading chart...</div>
-<script type="text/javascript">
-var myChart = new JSChart('chart_container', 'bar', '');
-myChart.setDataArray([['Mar02', 24],['Mar03', 57],['Mar04', 33],['Mar05', 72],['Mar06', 22]]);
-myChart.colorize(['#C7D217','#B4BE14','#949E07','#6B720C','#E3E982']);
-myChart.setSize(600, 300);
-myChart.setIntervalEndY(80);
-myChart.setTitle('Client Fitness Tracker);
-myChart.setTitleFontSize(10);
-myChart.setGridOpacity(0.8);
-myChart.setBarSpacingRatio(55);
-myChart.setBarValuesColor('#7B7D77');
-myChart.setBarBorderWidth(0);
-myChart.setBarOpacity(1);
-myChart.setAxisWidth(1);
-myChart.setAxisNameX('', );
-myChart.setAxisNameY('', );
-myChart.draw();
+ <div class="container">
+   <canvas id="myChart"></canvas>
+</div>
+
+ <script>
+
+ let myChart = document.getElementById('myChart').getContext('2d');
+
+ // Global Options
+ Chart.defaults.global.defaultFontFamily = 'Lato';
+ Chart.defaults.global.defaultFontsize = 18;
+ Chart.defaults.global.defaultFontColor = '#777';
+
+
+ let PrPopChart = new Chart(myChart, {
+   type:'pie', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+   data:{
+     labels:['San Juan', 'Bayamón', 'Carolina', 'Ponce', 'Caguas', 'Guaynabo', 'Mayaguez', 'Trujillo Alto', 'Arecibo', 'Fajardo'],
+     datasets:[{
+       label:'Population',
+       data:[
+         418140,
+         203499,
+         170404,
+         152634,
+         86804,
+         81360,
+         78647,
+         54189,
+         49318,
+         34068
+       ],
+
+       // backgroundColor: 'green',
+       backgroundColor:[
+         '#e65100',
+         '#e65100',
+         '#f57c00',
+         '#fb8c00',
+         '#ff9800',
+         '#ffa726',
+         '#ffb74d',
+         '#ffcc80',
+         '#ffe0b2',
+         '#fff3e0'
+       ],
+       borderWidth:1,
+       borderColor:'white',
+       hoverBorderWidth: 3,
+       hoverBorderColor: 'grey'
+     }]
+   },
+   options:{
+     title:{
+       display: true,
+       text: 'Largest Municipalities in Puerto Rico',
+       fontSize:25
+     },
+     legend:{
+       display:true,
+       position:'right',
+       labels:{
+         fontColor: '#000'
+       }
+     },
+     layout:{
+       padding:{
+         left:50,
+         right:0,
+         bottom:0,
+         top:0
+       }
+     },
+     tooltips:{
+       enabled:true
+     }
+   }
+ });
 </script>
 </body>
 </html>
+© 2021 GitHub, Inc.
