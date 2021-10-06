@@ -226,13 +226,14 @@
               </div>
               </div>
 
-              {{#each workout}}
-                <div class="col-sm-4">
                   <div class="card mb-3">
                     <div class="card-body">
                       <div class="row">
                         <h5 class="mb-0">Workout</h5>
                           <div class="card">
+
+{{#each workout}}
+
                             <div class="card-body">
                               <h6>Day of the Week</h6>
                               <p>{{this.dayofweek}}</p>
@@ -253,12 +254,14 @@
                               <h6>Reps</h6>
                               <p>{{this.reps}}</p>
                             </div>
+   {{/each}}
+
                           </div>
                         </div>
                     </div>
                   </div>
                 </div>
-              {{/each}}
+           
 
               {{!-- <div class="row gutters-sm">
                 <div class="col-md-8">
