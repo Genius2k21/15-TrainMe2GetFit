@@ -1,38 +1,27 @@
-<canvas id="myChart" width="400" height="400"></canvas>
-<script>
-var ctx = document.getElementById('myChart').getContext('2d');
-var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    }
-});
+<html>
+<head>
+<title>JS Charts</title>
+<script type="text/javascript" src="jscharts.js"></script>
+</head>
+<body>
+<div id="chart_container">Loading chart...</div>
+<script type="text/javascript">
+var myChart = new JSChart('chart_container', 'bar', '');
+myChart.setDataArray([['Mar02', 24],['Mar03', 57],['Mar04', 33],['Mar05', 72],['Mar06', 22]]);
+myChart.colorize(['#C7D217','#B4BE14','#949E07','#6B720C','#E3E982']);
+myChart.setSize(600, 300);
+myChart.setIntervalEndY(80);
+myChart.setTitle('Year-to-year growth rates in home broadband penetration');
+myChart.setTitleFontSize(10);
+myChart.setGridOpacity(0.8);
+myChart.setBarSpacingRatio(55);
+myChart.setBarValuesColor('#7B7D77');
+myChart.setBarBorderWidth(0);
+myChart.setBarOpacity(1);
+myChart.setAxisWidth(1);
+myChart.setAxisNameX('', );
+myChart.setAxisNameY('', );
+myChart.draw();
 </script>
+</body>
+</html>
