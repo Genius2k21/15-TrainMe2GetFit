@@ -13,14 +13,13 @@ END //
 DELIMITER  ;
 
 
-
-DROP PROCEDURE IF EXISTS sp_getClient;
+DROP PROCEDURE sp_getClient;
 
 DELIMITER //
-CREATE PROCEDURE sp_getClient(IN userid INT, IN clientid INT)
+CREATE PROCEDURE `sp_getClient`(IN userid INT, IN clientid INT)
 BEGIN
 	SELECT * FROM client 
-    WHERE id = clientid 
+    WHERE client_id = clientid 
     AND user_id = userid;
 END //
-DELIMITER  ;
+DELIMITER ;

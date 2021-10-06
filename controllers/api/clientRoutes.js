@@ -1,23 +1,39 @@
 const router = require('express').Router();
 const sequelize = require('../../config/connection');
-const { Client, User} = require('../../models');
+const { Client, User, ClientProfile} = require('../../models');
 
 //GET client profile for client
 router.get('/:userid/:clientid', async(req,res) =>{
-        const clientid = req.params.clientid;
-        const userid = req.params.userid;
+        
+    const clientid = req.params.clientid;
+    const userid = req.params.userid;
 
-        sequelize.query('CALL sp_getClient(:userid,:clientid)',{replacements: {userid: userid, clientid: clientid}})
+      try{
+            let client;
+            let profile;
+
+            const dbclient = await sequelize.query('CALL sp_getClient(:userid,:clientid)', {replacements: {userid: userid, clientid: clientid}})
             .then(function(response){
             
-                const client = response;
+                
+                client = response[0];              
                 console.log(client);
+              
+            })
+        
+            const dbprofile = await sequelize.query('CALL sp_getClientProfile(:userid,:clientid)',{replacements: {userid: userid, clientid: clientid}})
+            .then(function(response){
+
+                profile = response[0];
+                console.log(profile);
+
+            })
+
+            res.render('clientView', {client, profile})
+        }catch(error){
+            res.status(400).json(err);
+        }
             
-                    res.status(200).json(response);
-                })
-            .catch(function(err){
-                    res.status(400).json(err);
-            });
 })
 
 
@@ -115,6 +131,35 @@ router.get('/clientworkout/user/:userid',async(req,res) =>{
    });
 })
 
+//post client information for user and client 
+router.post('/clientprofile/:userid', async(req,res) =>{
+
+    const userid = req.params.userid;
+
+    try{
+        const dbClient = await Client.create({
+            first_name: req.body.firstname,
+            last_name: req.body.lastname,
+            date_of_birth: req.body.dateofbirth,
+            gender: req.body.gender,
+            email: req.body.email,
+            phone: req.body.phone,
+            address_line_1: req.body.addressline1,
+            address_line_2: req.body.addressline2,
+            city: req.body.city,
+            state: req.body.state,
+            zip: req.body.zip,
+            user_id: userid,
+        });
+
+        res.status(200).json(dbUserData);
+
+    }catch(err){
+        conole.log(err);
+    res.status(500).json(err);
+    }
+    
+});
 
 
 module.exports = router;
