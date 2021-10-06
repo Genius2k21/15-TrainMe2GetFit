@@ -148,6 +148,35 @@ router.get('/clientworkout/user/:userid',async(req,res) =>{
    });
 })
 
+//post client information for user and client 
+router.post('/clientprofile/:userid', async(req,res) =>{
+
+    const userid = req.params.userid;
+
+    try{
+        const dbClient = await Client.create({
+            first_name: req.body.firstname,
+            last_name: req.body.lastname,
+            date_of_birth: req.body.dateofbirth,
+            gender: req.body.gender,
+            email: req.body.email,
+            phone: req.body.phone,
+            address_line_1: req.body.addressline1,
+            address_line_2: req.body.addressline2,
+            city: req.body.city,
+            state: req.body.state,
+            zip: req.body.zip,
+            user_id: userid,
+        });
+
+        res.status(200).json(dbUserData);
+
+    }catch(err){
+        conole.log(err);
+    res.status(500).json(err);
+    }
+    
+});
 
 
 module.exports = router;
