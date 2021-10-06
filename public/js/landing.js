@@ -1,25 +1,17 @@
-var timeEl = document.getElementById("#time");
-var addClientEl = document.getElementById("add-client");
 
-function createEventListeners(){
+const addClient = async() => {
 
-    document.addEventListener('load', (event) =>{
-        timeEl.innerHTML = formatDate(Now());
-        console.log(event);
-    })
+        window.location.replace("/addclient");   
+};
 
-    addClientEl.addEventListener('onClick', function(e){
-        console.log(e);
-    })
+const viewClient = async(event) => {
+    event.preventDefault();
+    //console.log(event.target);
+    var element = event.target;
+    
+    var clientid = element.getAttribute("data-clientid");
+    window.location.replace("/api/client/4/"+clientid);
+};
 
-}
-
-//function to initiate game
-function init(){
-
-    console.log("hello");
-    createEventListeners();
-
-}
-//initialize game start
-init();
+document.querySelector('#add-client').addEventListener('click', addClient);
+document.querySelector('#view-client').addEventListener('click', viewClient);
