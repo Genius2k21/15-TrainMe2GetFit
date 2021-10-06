@@ -1,167 +1,228 @@
 <head>
-    <link rel="stylesheet" href="./css/addclient.css"/>
 	<link rel="stylesheet" type="text/css" href="./css/nunito-font.css">
 	<link rel="stylesheet" type="text/css" href="./fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+	 <link rel="stylesheet" href="./css/addclient.css"/>
 </head>
 
 <div class="page-content">
 <div class="wizard-v5-content">
 <div class="wizard-form">
-<form class="form-register" id="form-register" action="#" method="post">
-	<div id="form-total">
-		<!-- SECTION 1 -->
-		<h2>
-			<span class="step-icon"><i class="zmdi zmdi-check"></i></span>
-			<span class="step-text">Client Information</span>
-		</h2>
-		<section>
-			<div class="inner">
-				<div class="form-row">
-					<div class="form-holder">
-						<label for="first_name">First Name</label>
-						<input type="text" placeholder="ex: Laura" class="form-control" id="first_name" name="first_name">
-					</div>
-					<div class="form-holder">
-						<label for="last_name">Last Name</label>
-						<input type="text" placeholder="ex: Vaughn" class="form-control" id="last_name" name="last_name">
-					</div>
+<form class="form-register" id="form-register" action="/js/addclient.js">
+<div id="form-total">
+	<!-- SECTION 1 -->
+	<h2>
+		<span class="step-icon"><i class="zmdi zmdi-check"></i></span>
+		<span class="step-text">Client Information</span>
+	</h2>
+	<section>
+		<div class="inner">
+			<div class="form-row">
+				<div class="form-holder">
+					<label for="first_name">First Name</label>
+					<input type="text" placeholder="ex: Laura" class="form-control" id="first_name" name="first_name" required />
 				</div>
-				<div class="form-row">
-					<div id="radio">
-						<label for="gender">Gender:</label>
-						<input type="radio" name="gender" value="male" checked> Male
-						<input type="radio" name="gender" value="female"> Female
-					</div>
-				</div>
-				<div class="form-row">
-					<div class="form-holder form-holder-3">
-						<label for="phone">Phone Number</label>
-						<input type="text" placeholder="+1 777-888-8888" class="form-control" id="phone" name="phone">
-					</div>
-				</div>
-				<div class="form-row">
-					<div class="form-holder form-holder-2">
-						<label for="email">Email Address:</label>
-						<input type="email" name="email" class="email input-step-2-1" id="email" placeholder="ex: example@email.com" pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}">
-					</div>
-				</div>
-			<div class="form-row date">
-					<div class="form-holder form-holder-2 date" data-provide="datepicker-inline">
-						<label for="birthdate" class="special-label">Date of Birth:</label>
-							<input type="text" class="form-control" id="birthdate">
-								<span class="glyphicon glyphicon-th"></span>
-					</div>
-				</div>
-				<div class="form-row">
-					<div class="form-holder form-holder-2">
-						<label for="address_line_1">Address Line 1</label>
-						<input type="text" placeholder="622 Dixie Path" class="form-control" id="address_line_1" name="address_line_1">
-				</div>
-				<div class="form-row">
-					<div class="form-holder form-holder-2">
-						<label for="address_line_2">Address Line 2</label>
-						<input type="text" placeholder="Apt 22" class="form-control" id="address_line_2"/> 
-					</div>
-				</div>
-				<div class="form-row">
-					<div class="form-holder form-holder-2">
-						<label for="city">City</label>
-						<input type="text" placeholder="South Tobinchester" class="form-control" id="city" name="city">
-					</div>
-					<div class="form-holder form-holder-2">
-						<label for="state">State/Province</label>
-						<input type="text" placeholder="UT" class="form-control" id="state" name="state">
-					</div>
-					<div class="form-holder">
-						<label for="zipcode">Zip Code</label>
-						<input type="text" class="form-control" id="zipcode" name="zipcode">
-					</div>
+				<div class="form-holder">
+					<label for="last_name">Last Name</label>
+					<input type="text" placeholder="ex: Vaughn" class="form-control" id="last_name" name="last_name" required />
 				</div>
 			</div>
-		</section>
-		<!-- SECTION 2 -->
-		<h2>
-			<span class="step-icon"><i class="zmdi zmdi-check"></i></span>
-			<span class="step-text">Client's Measurements</span>
-		</h2>
-		<section>
-			<div class="inner">
-				<div class="form-row">
-					<div class="form-holder">
-						<label for="bank">Bank Name:</label>
-						<input type="text" placeholder="UsBank" class="form-control input-step-2" id="bank" name="bank">
-						<span><i class="zmdi zmdi-search"></i></span>
-					</div>
-					<div class="form-holder">
-						<label for="branch">Branch Name:</label>
-						<input type="text" placeholder="America" class="form-control input-step-2" id="branch" name="branch">
-					</div>
-				</div>
-			
-				<div class="form-row">
-					<div class="form-holder form-holder-2">
-						<label for="account_name">Account Name:</label>
-						<input type="text" placeholder="Account Name" class="form-control input-step-2-1" id="account_name" name="account_name">
-					</div>
-				</div>
-				<div class="form-row">
-					<div class="form-holder form-holder-2">
-						<label for="account_number">Account Number:</label>
-						<input type="text" placeholder="4576-6970-3801-2620" class="form-control input-step-2-2" id="account_number" name="account_number">
-						<span class="card"><i class="zmdi zmdi-card"></i></span>
-					</div>
-				</div>	
-			</div>
-		</section>
-		<!-- SECTION 3 -->
-		<h2>
-			<span class="step-icon"><i class="zmdi zmdi-check"></i></span>
-			<span class="step-text">Confirm Details</span>
-		</h2>
-		<section>
-			<div class="inner">
-				<h3>Comfirm Details</h3>
-				<div class="form-row table-responsive">
-					<table class="table">
-						<tbody>
-							<tr class="space-row">
-								<th>Full Name:</th>
-								<td id="fullname-val"></td>
-							</tr>
-							<tr class="space-row">
-								<th>Email Address:</th>
-								<td id="email-val"></td>
-							</tr>
-							<tr class="space-row">
-								<th>Phone Number:</th>
-								<td id="phone-val"></td>
-							</tr>
-							<tr class="space-row">
-								<th>Address Location:</th>
-								<td id="address-val"></td>
-							</tr>
-							<tr class="space-row">
-								<th>Gender:</th>
-								<td id="gender-val"></td>
-							</tr>
-							<tr class="space-row">
-								<th>Account Name:</th>
-								<td id="account-name-val"></td>
-							</tr>
-							<tr class="space-row">
-								<th>Account Number:</th>
-								<td id="account-number-val"></td>
-							</tr>
-						</tbody>
-					</table>
+			<div class="form-row">
+				<div id="radio">
+					<label for="gender">Gender:</label>
+					<input type="radio" name="gender" value="male" checked> Male
+					<input type="radio" name="gender" value="female"> Female
 				</div>
 			</div>
-		</section>
-		        	</div>
-		        </form>
+			<div class="form-row">
+				<div class="form-holder form-holder-3" data-provide="datepicker">
+				<label for="birthdate">Date of Birth:</label>
+				<div class='input-group date'>
+					<input id='birthdate' type='date' placeholder="MM-DD-YYYY" class="form-control" pattern="\d{1,2}/\d{1,2}/\d{4}" required />
+         		</div>
+			</div>
+		<div class="form-holder form-holder-3">
+			<label for="phone">Phone Number</label>
+			<input type="tel" placeholder="+1 777-888-8888" class="form-control" id="phone" name="phone" required />
+		</div>
+		</div>
+			<div class="form-row">
+				<div class="form-holder form-holder-2">
+					<label for="email">Email Address:</label>
+					<input type="email" name="email" class="email input-step-2-1" id="email" placeholder="ex: example@email.com" pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" required />
+				</div>
+			</div>
+		
+			<div class="form-row">
+				<div class="form-holder form-holder-2">
+					<label for="address_line_1">Address Line 1</label>
+					<input type="text" placeholder="622 Dixie Path" class="form-control" id="address_line_1" name="address_line_1" />
+				</div>
+			</div>
+			<div class="form-row">
+				<div class="form-holder form-holder-6">
+					<label for="address_line_2">Address Line 2</label>
+					<input type="text" placeholder="Apt 22" class="form-control" id="address_line_2"/> 
+				</div>
+			</div>
+			<div class="form-row">
+				<div class="form-holder form-holder-5">
+					<label for="city">City</label>
+					<input type="text" placeholder="South Tobinchester" class="form-control" id="city" name="city" />
+				</div>
+				<div class="form-holder form-holder-5">
+					<label for="state">State/Province</label>
+					<input type="text" placeholder="UT" class="form-control" id="state" name="state" />
+				</div>
+				<div class="form-holder form-holder-5">
+					<label for="zipcode">Zip Code</label>
+					<input type="number" class="form-control" id="zipcode" name="zipcode" />
+				</div>
 			</div>
 		</div>
+</section>
+<!-- SECTION 2 -->
+<h2>
+	<span class="step-icon"><i class="zmdi zmdi-check"></i></span>
+	<span class="step-text">Client's Measurements</span>
+</h2>
+<section>
+			<div class="inner">
+  <div class="form-group row">
+    <label for="height" class="col-3 col-form-label cust-label">Height :</label> 
+    <div class="col-3">
+      <select id="height_ft" name="height_ft" class="custom-select">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+      </select>
+	  <label for="height-feet" class="col-2 col-form-label cust-label">ft</label> 
+    </div>
+    <div class="col-3">
+     <select id="height_inch" name="height_in" class="custom-select">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+      </select>
+	  <label for="height-inch" class="col-2 col-form-label cust-label">in</label> 
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="weight" class="col-3 col-form-label cust-label">Weight :</label> 
+    <div class="col-8">
+      <input id="weight" name="weight" type="number" class="form-control" required />
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="goal_weight" class="col-3 col-form-label cust-label">Goal Weight :</label> 
+    <div class="col-8">
+      <input id="goal_weight" name="goal_weight" type="text" class="form-control" required />
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="shoulder" class="col-3 col-form-label cust-label">Shoulders :</label> 
+    <div class="col-8">
+      <input id="shoulder" name="shoulder" type="number" class="form-control" />
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="chest" class="col-3 col-form-label cust-label">Chest :</label> 
+    <div class="col-8">
+      <input id="chest" name="chest" type="number" class="form-control" />
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="waist" class="col-3 col-form-label cust-label">Waist :</label> 
+    <div class="col-8">
+      <input id="waist" name="waist" type="number" class="form-control" />
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="hips" class="col-3 col-form-label cust-label">Hips :</label> 
+    <div class="col-8">
+      <input id="hips" name="hips" type="number" class="form-control" />
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="left_thigh" class="col-3 col-form-label cust-label">Left Thigh :</label> 
+    <div class="col-3">
+      <input id="left_thigh" name="left_thigh" type="number" class="form-control" />
+    </div>
+    <label for="right_thigh" class="col-3 col-form-label text-right cust-label">Right Thigh :</label> 
+    <div class="col-3">
+      <input id="right_thigh" name="right_thigh" type="number" class="form-control" />
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="left_calf" class="col-3 col-form-label cust-label">Left Calf :</label> 
+    <div class="col-3">
+      <input id="left_calf" name="left_calf" type="number" class="form-control" />
+    </div>
+    <label for="c" class="col-3 col-form-label text-right cust-label">Right Calf :</label> 
+    <div class="col-3">
+      <input id="right_calf" name="right_calf" type="number" class="form-control" />
+    </div>
+  </div> 
+</div>
+</section>
+<!-- SECTION 3 -->
+<h2>
+	<span class="step-icon"><i class="zmdi zmdi-check"></i></span>
+	<span class="step-text">Confirm Details</span>
+</h2>
+<section>
+	<div class="inner">
+		<h3>Comfirm Details</h3>
+		<div class="form-row table-responsive">
+			<table class="table">
+			<tbody>
+				<tr class="space-row">
+						<th>Full Name:</th>
+						<td id="fullname-val"></td>
+					</tr>
+					<tr class="space-row">
+						<th>Email Address:</th>
+						<td id="email-val"></td>
+					</tr>
+					<tr class="space-row">
+						<th>Phone Number:</th>
+						<td id="phone-val"></td>
+					</tr>
+					<tr class="space-row">
+						<th>Gender:</th>
+						<td id="gender-val"></td>
+					</tr>
+					<tr class="space-row">
+						<th>Weight:</th>
+						<td id="weight-val"></td>
+					</tr>
+					<tr class="space-row">
+						<th>Goal Weight:</th>
+						<td id="goal-weight-val"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 	</div>
+	
+</section>
+</div>
+</form>
+		</div>
+	</div>
+</div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-steps/1.1.0/jquery.steps.min.js" integrity="sha512-bE0ncA3DKWmKaF3w5hQjCq7ErHFiPdH2IGjXRyXXZSOokbimtUuufhgeDPeQPs51AI4XsqDZUK7qvrPZ5xboZg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

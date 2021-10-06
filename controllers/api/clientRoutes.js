@@ -179,7 +179,7 @@ router.post('/clientprofile/:userid', async(req,res) =>{
         res.status(200).json(dbUserData);
 
     }catch(err){
-        conole.log(err);
+        console.log(err);
     res.status(500).json(err);
     }
     
