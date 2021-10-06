@@ -595,8 +595,8 @@ body {
 }
 
 .cust-btn{
-	background-color: var(--pink_lavender);
-	color: var(--ultramarine_blue);
+	background-color: var(--ultramarine_blue);
+	color: var(--white);
 }
 .cust-btn :hover{
 	background-color: var(--dark_liver);
