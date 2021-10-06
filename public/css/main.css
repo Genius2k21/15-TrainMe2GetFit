@@ -210,9 +210,9 @@ iframe {
 
 .wrap-login100 {
   width: 520px;
-  min-height: 100vh;
+  min-height: 66vh;
   background: var(--medium_slate_blue);
-  border-radius: 2px;
+  border-radius: 5px;
   position: relative;
 }
 
@@ -263,10 +263,12 @@ iframe {
   width: 100%;
   font-family: Poppins-Bold;
   font-size: 39px;
-  color: var(--ultramarine_blue);
+  color: var(--light);
   line-height: 1.2;
-  text-align: left;
-  background-color: var(--light);
+  text-align: center;
+  background-color: var(--ultramarine_blue);
+  border-radius: 8px;
+  box-shadow: 3px 3px var(--shadow);
 }
 
 
