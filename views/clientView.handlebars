@@ -227,7 +227,7 @@
               </div>
 
               {{#each workout}}
-                <div class="col-md-8">
+                <div class="col-sm-4">
                   <div class="card mb-3">
                     <div class="card-body">
                       <div class="row">
@@ -235,23 +235,23 @@
                           <div class="card">
                             <div class="card-body">
                               <h6>Day of the Week</h6>
-                              <p>{{workout.dayofweek}}</p>
+                              <p>{{this.dayofweek}}</p>
                             </div>
                             <div>
                               <h6>Exercise Name</h6>
-                              <p>{{this.workout.exercise_name}}</p>
+                              <p>{{this.exercise_name}}</p>
                             </div>
                             <div>
                               <h6>Body Part Focus</h6>
-                              <p>{{this.workout.body_part}}</p>
+                              <p>{{this.body_part}}</p>
                             </div>
                             <div>
                               <h6>Sets</h6>
-                              <p>{{this.workout.sets}}</p>
+                              <p>{{this.sets}}</p>
                             </div>
                             <div>
                               <h6>Reps</h6>
-                              <p>{{this.workout.reps}}</p>
+                              <p>{{this.reps}}</p>
                             </div>
                           </div>
                         </div>
