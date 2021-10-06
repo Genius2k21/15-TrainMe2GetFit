@@ -34,6 +34,9 @@ router.get('/login' , async(req,res) =>{
    try{
       const username = req.query.username;
       const password = req.query.password;
+      
+      console.log(username);
+      console.log(password);
 
       sequelize.query('CALL sp_getUser(:username, :password)',{replacements: {username: username, password: password }}).then(function(response){
          
