@@ -1,34 +1,70 @@
-const formEl = document.querySelector("#form-register");
+
+
+const check1 = async (event) => {
+    event.preventDefault();
+    console.log(`what event ${event.target.type}`)
+}
+
 
 const submitNewClient = async (event) => {
     event.preventDefault();
-    console.log(event.target);
-    console.log('how does this fire');
-    const firstNameEl = document.querySelector('#first_name');
-    const lastNameEl = document.querySelector('#last_name');
-    const emailEl = document.querySelector('#email');
-    const phoneEl = document.querySelector('#phone');
-    const birthdateEl = document.querySelector('#birthdate');
-    const streetAddress1El = document.querySelector('#address_line_1');
-    const streetAddress2El = document.querySelector('#address_line_2');
-    const cityEl = document.querySelector('#city');
-    const stateEl = document.querySelector('#state');
-    const zipcodeEl = document.querySelector('#zipcode');
-    const genderEl = $('form input[type=radio]:checked').val();
-    const height_ftEl = document.querySelector('#height_ft');
-    const height_inEl = document.querySelector('#height_in');
-    const weightEl = document.querySelector('#weight');
-    const goal_weightEl = document.querySelector('#goal_weight');
-    const shoulderEl = document.querySelector('#shoulder');
-    const chestEl = document.querySelector('#chest');
-    const waistEl = document.querySelector('#waist');
-    const hipsEl = document.querySelector('#hips');
-    const left_thighEl = document.querySelector('#left_thigh');
-    const right_thighEl = document.querySelector('#right_thigh');
-    const left_calfEl = document.querySelector('#left_calf');
-    const right_calfEl = document.querySelector('#right_calf');
 
-}
+    if ( event.target.type === 'submit') {
+        
+        const firstname = document.querySelector('#first_name').value.trim();
+        const lastname = document.querySelector('#last_name').value.trim();
+        const email = document.querySelector('#email').value.trim();
+        const phone = document.querySelector('#phone').value.trim();
+        const dateofbirth = document.querySelector('#birthdate').value.trim();
+        const addressline1 = document.querySelector('#address_line_1').value.trim();
+        const addressline2 = document.querySelector('#address_line_2').value.trim();
+        const city = document.querySelector('#city').value.trim();
+        const state = document.querySelector('#state').value.trim();
+        const zip = document.querySelector('#zipcode').value.trim();
+        const gender = $('form input[type=radio]:checked').val();
+        
+        
+        // Should be able to send data, hardcoded userId which should come from session
+        const response = await fetch(`/api/client/clientprofile/5`, {
+            method: 'POST',
+            body: JSON.stringify({firstname, lastname, dateofbirth, gender, email, phone, addressline1, addressline2, city, state, zip}),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
+
+        if (response.ok){
+            alert('Client Added')
+        
+            const height_ftEl = document.querySelector('#height_ft').value.trim();
+            const height_inEl = document.querySelector('#height_in').value.trim();
+            const height = parseInt(height_inEl) + (parseInt(height_ftEl) * 12);
+
+            const weight = document.querySelector('#weight').value.trim();
+            const goal_weight = document.querySelector('#goal_weight').value.trim();
+            const shoulders = document.querySelector('#shoulder').value.trim();
+            const chest = document.querySelector('#chest').value.trim();
+            const waist = document.querySelector('#waist').value.trim();
+            const hips = document.querySelector('#hips').value.trim();
+            const left_thigh = document.querySelector('#left_thigh').value.trim();
+            const right_thigh = document.querySelector('#right_thigh').value.trim();
+            const left_calf = document.querySelector('#left_calf').value.trim();
+            const right_calf = document.querySelector('#right_calf').value.trim();
+
+               // Should be able to send data, hardcoded userId which should come from session
+            const response = await fetch(`/api/client/clientprofile/5`, {
+                method: 'POST',
+                body: JSON.stringify({}),
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            });
+
+        } else{
+            alert('Failed to add client!')
+        }
+    }
+};
 
 /**
  * Out of the box function for wizard functionality
@@ -45,7 +81,7 @@ $(function(){
         labels: {
             previous : 'Back',
             next : '<i class="zmdi zmdi-chevron-right"></i>',
-            // finish : '<i class="zmdi zmdi-chevron-right"></i>',
+            finish : `<button type="submit" id="client-submit" name="register" class="btn btn-lg cust-btn">Register</button>`,
             current : ''
         },
         onStepChanging: function (event, currentIndex, newIndex) { 
@@ -108,7 +144,6 @@ $(function(){
                 }
                 //else no reason to stop execution
             }
-    
             const fullname = firstNameEl.value.trim()+' '+lastNameEl.value.trim();
 
             $('#fullname-val').text(fullname);
@@ -118,41 +153,11 @@ $(function(){
             $('#weight-val').text(weightEl.value.trim());
             $('#goal-weight-val').text(goal_weightEl.value.trim());
             
-            
             return true;      
         },
-
     });
 });
 
-formEl.on("submit", submitNewClient);
-
-
-
-const addClientHandler = async (event) => {
-    // Stop the browser from submitting the form so we can do so with JavaScript
-    event.preventDefault();
-  
-    // Gather the data from the form elements on the page
-    
-    if (email && phone && firstName && lastName && gender) {
-      // Send the e-mail and password to the server
-      const response = await fetch('/api/users/login', {
-        method: 'POST',
-        body: JSON.stringify({ email, password }),
-        headers: { 'Content-Type': 'application/json' },
-      });
-  
-      if (response.ok) {
-        document.location.replace('/');
-      } else {
-        alert('Failed to log in');
-      }
-    }
-  };
-  
-//   document
-//     .querySelector('.form-register')
-//     .addEventListener('submit', loginFormHandler);
-  
-
+document
+    .querySelector("#form-register")
+    .addEventListener('click', submitNewClient);
