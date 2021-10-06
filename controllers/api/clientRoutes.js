@@ -44,7 +44,7 @@ router.get('/:userid/:clientid', async (req,res) =>{
             })
             const dbworkout = await sequelize.query('CALL sp_getClientWorkout(:userid,:clientid)',{replacements: {userid: userid, clientid: clientid}})
             .then(function(response){
-                workout = response[0];
+                workout = response;
                 console.log(workout);
             })
             res.render('clientView', {client, profile, diet, workout})
