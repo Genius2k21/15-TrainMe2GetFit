@@ -1,16 +1,16 @@
-let timeEl = document.getElementById("time");
-let addClientEl = document.getElementById("add-client");
+var timeEl = document.getElementById("#time");
+var addClientEl = document.getElementById("add-client");
 
 function createEventListeners(){
 
     document.addEventListener('load', (event) =>{
         timeEl.innerHTML = formatDate(Now());
         console.log(event);
-    });
+    })
 
-    addClientEl.addEventListener('click',(event) =>{
-        console.log(event);
-    });
+    addClientEl.addEventListener('onClick', function(e){
+        console.log(e);
+    })
 
 }
 
@@ -21,7 +21,5 @@ function init(){
     createEventListeners();
 
 }
-
- 
 //initialize game start
 init();
