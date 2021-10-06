@@ -1,23 +1,56 @@
 const router = require('express').Router();
 const sequelize = require('../../config/connection');
-const { Client, User} = require('../../models');
+const { Client, User, ClientWorkout} = require('../../models');
 
 //GET client profile for client
-router.get('/:userid/:clientid', async(req,res) =>{
-        const clientid = req.params.clientid;
-        const userid = req.params.userid;
+// router.get('/:userid/:clientid', async(req,res) =>{
+//         const clientid = req.params.clientid;
+//         const userid = req.params.userid;
 
-        sequelize.query('CALL sp_getClient(:userid,:clientid)',{replacements: {userid: userid, clientid: clientid}})
+//         sequelize.query('CALL sp_getClient(:userid,:clientid)',{replacements: {userid: userid, clientid: clientid}})
+//             .then(function(response){
+            
+//                 const client = response[0];
+//                 console.log(client);
+//                 res.render('clientView', {client})
+
+//                 })
+//             .catch(function(err){
+//                     res.status(400).json(err);
+//             });
+// })
+
+router.get('/:userid/:clientid', async (req,res) =>{
+    const clientid = req.params.clientid;
+    const userid = req.params.userid;
+      try{
+            let client;
+            let profile;
+            let workout;
+            const dbclient = await sequelize.query('CALL sp_getClient(:userid,:clientid)', {replacements: {userid: userid, clientid: clientid}})
             .then(function(response){
-            
-                const client = response;
+                client = response[0];
                 console.log(client);
-            
-                    res.status(200).json(response);
-                })
-            .catch(function(err){
-                    res.status(400).json(err);
-            });
+            })
+            const dbprofile = await sequelize.query('CALL sp_getClientProfile(:userid,:clientid)',{replacements: {userid: userid, clientid: clientid}})
+            .then(function(response){
+                profile = response[0];
+                console.log(profile);
+            })
+            const dbdiet = await sequelize.query('CALL sp_getClientDiet(:userid,:clientid)',{replacements: {userid: userid, clientid: clientid}})
+            .then(function(response){
+                diet = response[0];
+                console.log(diet);
+            })
+            const dbworkout = await sequelize.query('CALL sp_getClientWorkout(:userid,:clientid)',{replacements: {userid: userid, clientid: clientid}})
+            .then(function(response){
+                workout = response[0];
+                console.log(workout);
+            })
+            res.render('clientView', {client, profile, diet, workout})
+        }catch(err){
+            res.status(400).json(err);
+        }
 })
 
 

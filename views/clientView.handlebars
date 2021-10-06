@@ -4,7 +4,7 @@
           <!-- Breadcrumb -->
           <nav aria-label="breadcrumb" class="main-breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="/dashboard">Dashboard</a></li>
+              <li class="breadcrumb-item"><a href="/landing">Landing</a></li>
               <li class="breadcrumb-item active" aria-current="page">Client Profile</li>
             </ol>
           </nav>
@@ -17,8 +17,8 @@
                   <div class="d-flex flex-column align-items-center text-center">
                     <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
                     <div class="mt-3">
-                      <h4>{{first_name}} {{last_name}}</h4>
-                      <h6>{{gender}}</h6>
+                      <h4>{{client.first_name}} {{client.last_name}}</h4>
+                      <h6>{{client.gender}}</h6>
                       <button class="btn btn-outline-primary">Message</button>
                     </div>
                   </div>
@@ -27,15 +27,38 @@
               <div class="card mt-3">
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                    <h6>Diet</h6>
-                    <span class="text-secondary">{{name}}</span>
+                    <h5>Diet Plan</h5>
+                    <span class="text-secondary">{{diet.name}}</span>
                   </li>
                   <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                    <h6>Meals</h6>
+                    <h5>Meals</h5>
                         <ul class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                            {{meal1}} 
-                            ---
-                            {{meal2}}
+                            <hr>
+                            <div>
+                            <h6>Breakfast</h6>
+                            <ul>{{diet.meal1}}</ul> 
+                            </div>
+                            <hr>
+                            <div>
+                            <h6>Morning Snack</h6>
+                            <ul>{{diet.meal2}}</ul> 
+                            </div>
+                            <hr>
+                            <div>
+                            <h6>Lunch</h6>
+                            <ul>{{diet.meal3}}</ul> 
+                            </div>
+                            <hr>
+                            <div>
+                            <h6>Afternoon Snack</h6>
+                            <ul>{{diet.meal4}}</ul> 
+                            </div>
+                            <hr>
+                            <div>
+                            <h6>Dinner</h6>
+                            <ul>{{diet.meal5}}</ul> 
+                            </div>
+                            <hr>
                         </ul>
                   </li>
                 </ul>
@@ -45,11 +68,13 @@
               <div class="card mb-3">
                 <div class="card-body">
                   <div class="row">
+                    <h5>Contact Information</h5>
+                    <hr>
                     <div class="col-sm-3">
                       <h6 class="mb-0">Full Name</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      {{first_name}} {{last_name}}
+                      {{client.first_name}} {{client.last_name}}
                     </div>
                   </div>
                   <hr>
@@ -58,7 +83,7 @@
                       <h6 class="mb-0">Email</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      {{email}}
+                      {{client.email}}
                     </div>
                   </div>
                   <hr>
@@ -67,7 +92,7 @@
                       <h6 class="mb-0">Phone</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      {{phone}}
+                      {{client.phone}}
                     </div>
                   </div>
                   <hr>
@@ -76,14 +101,166 @@
                       <h6 class="mb-0">Address</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      {{address_line_1}} {{address_line_2}} 
-                      {{city}}, {{state}} {{zip}}
+                      {{client.address_line_1}} {{client.address_line_2}} 
+                      {{client.city}}, {{client.state}} {{client.zip}}
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div class="row gutters-sm">
+              <div class="col-md-8">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Height</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      {{profile.height}} inches
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Weight</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      {{profile.weight}} lbs
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Goal Weight</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      {{profile.goal_weight}} lbs
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+              <div class="col-md-8">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <h5 class="mb-0">Body Measurements</h5>
+                    </div>
+                  </div>  
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Shoulders</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      {{profile.shoulders}} inches
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Chest</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      {{profile.chest}} inches
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Waist</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      {{profile.waist}} inches
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Hips</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      {{profile.hips}} inches
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Left Thigh</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      {{profile.left_thigh}} inches
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Right Thigh</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      {{profile.right_thigh}} inches
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Left Calf</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      {{profile.left_calf}} inches
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Right Calf</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      {{profile.right_thigh}} inches
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+              </div>
+              </div>
+
+              {{#each workout}}
+                <div class="col-md-8">
+                  <div class="card mb-3">
+                    <div class="card-body">
+                      <div class="row">
+                        <h5 class="mb-0">Workout</h5>
+                          <div class="card">
+                            <div class="card-body">
+                              <h6>Day of the Week</h6>
+                              <p>{{workout.dayofweek}}</p>
+                            </div>
+                            <div>
+                              <h6>Exercise Name</h6>
+                              <p>{{this.workout.exercise_name}}</p>
+                            </div>
+                            <div>
+                              <h6>Body Part Focus</h6>
+                              <p>{{this.workout.body_part}}</p>
+                            </div>
+                            <div>
+                              <h6>Sets</h6>
+                              <p>{{this.workout.sets}}</p>
+                            </div>
+                            <div>
+                              <h6>Reps</h6>
+                              <p>{{this.workout.reps}}</p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              {{/each}}
+
+              {{!-- <div class="row gutters-sm">
                 <div class="col-md-8">
                   <div class="card mb-3">
                     <div class="card-body">
@@ -100,9 +277,9 @@
                             <tbody>
                                 <tr>
                                     <th scope="row"></th>
-                                    <td>{{height}}</td>
-                                    <td>{{weight}}</td>
-                                    <td>{{goal_weight}}</td>
+                                    <td>{{profile.height}}</td>
+                                    <td>{{profile.weight}}</td>
+                                    <td>{{profile.goal_weight}}</td>
                                 </tr>
                             </tbody>
                             <thread>
@@ -142,7 +319,7 @@
                         </table>
                     </div>
                   </div>
-                </div>
+                </div> --}}
                 <div class="col-sm-6 mb-3">
                   <div class="card h-100">
                     <div class="card-body">
