@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const sequelize = require('../../config/connection');
 const withAuth = require('../../utils/auth');
-const { Client, User } = require('../../models');
+// const { Client, User } = require('../../models');
 
 
 //POST user information to create user account
@@ -32,38 +32,38 @@ try{
 
 
 //POST user information to create user account
-router.get('/login' , async(req,res) =>{
+router.post('/login' , async(req,res) =>{
 
    try{
-      const username = req.query.username;
-      const password = req.query.password;
       
+      const username = req.body.username;
+      const password = req.body.password;
+     
       sequelize.query('CALL sp_getUser(:username, :password)',{replacements: {username: username, password: password }}).then(function(response){
     
-       console.log(`what is the ${response}`);
        //Check if user has been found matching
       if(response != ''){
-         console.log('working')
          const userid  = response[0].user_id;
-         
+        
          req.session.save(() =>{
             req.session.user_id = userid;
             req.session.logged_in = true;
          })
-         res.status(200).redirect('../landing/'+ userid +'?username='+username);
+         res.status(200).redirect('../landing/'+userid+'?username='+username);
       } else{
          res.status(404).json({ message: 'Incorrect email or password, please try again' }); 
       }
       });
    } catch (err){
+      console.log(err.message);
       res.status(500).json(err);
    }
 
 });
 
 
-//GET client information for user and client 
-router.get('/:userid',async(req,res) =>{
+//GET client information for user and client, withAuth helper to ensure users have a valid session id 
+router.get('/:userid', withAuth, async(req,res) =>{
 
    const userid = req.params.userid;
 
