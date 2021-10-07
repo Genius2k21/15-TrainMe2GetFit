@@ -38,7 +38,9 @@ router.post('/login' , async(req,res) =>{
       
       const username = req.body.username;
       const password = req.body.password;
-     
+      
+      console.log(`User name is ${username}`);
+      console.log(`Psswd is ? ${password}`);
       sequelize.query('CALL sp_getUser(:username, :password)',{replacements: {username: username, password: password }}).then(function(response){
     
        //Check if user has been found matching
