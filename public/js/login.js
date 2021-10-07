@@ -1,9 +1,7 @@
-const userData = require('../../seeds/user-data.json')
+//const userData = require('../../seeds/user-data.json')
 
 const loginFormHandler = async (event) => {
     event.preventDefault();
-
-    console.log("test")
   
     // Collect values from the login form
     const username = document.querySelector('#username').value.trim();
@@ -20,7 +18,7 @@ const loginFormHandler = async (event) => {
   
       if (response.ok) {
         // If successful, redirect the browser to the profile page
-        document.location.replace('/dashboard');
+        document.location.replace('/landing');
       } else {
         alert(response.statusText);
         //alert('Invalid User!, Please sign up to Login')
