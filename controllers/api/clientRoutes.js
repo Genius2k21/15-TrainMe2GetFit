@@ -53,7 +53,7 @@ router.get('/:userid/:clientid', async (req,res) =>{
                 workout = response;
                 console.log(workout);
             })
-            res.render('clientView', {client, profile, diet, workout})
+            res.render('clientView', {client, profile, diet, workout, logged_in: req.session.logged_in})
 
         }catch(err){
             res.status(400).json(err);

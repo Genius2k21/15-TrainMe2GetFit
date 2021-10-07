@@ -29,7 +29,7 @@ router.get("/clientView", withAuth, (req, res) => {
     res.render('clientView');
 });
 
-router.get("/addclient", withAuth, (req, res) => {
+router.get("/addclient", (req, res) => {
     res.render('addClient');
 });
 
