@@ -10,7 +10,12 @@ const viewClient = async(event) => {
     var element = event.target;
     
     var clientid = element.getAttribute("data-clientid");
+    console.log(clientid);
     window.location.replace("/api/client/4/"+clientid);
+    // const pageResponse = await fetch('/clientView', {
+    //     method: 'GET'
+    // });
+    
 };
 
 document.querySelector('#add-client').addEventListener('click', addClient);

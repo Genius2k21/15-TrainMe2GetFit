@@ -19,16 +19,10 @@ router.get('/:userid',async(req,res) =>{
                           raw: true,
                           type: QueryTypes.SELECT,
                           mapToModel: true}).then(function(response){
-                           console.log(`
-                                what is user id  ${userid}
-                                what is user name ${username}
-                           
-                           `);
-                            req.session.userid = userid;
-                            req.session.username = username;
+     
 
                             const clients = response[0];
-                            res.render('landing', {clients, username: username});
+                            res.render('landing', {clients, username: username, logged_in: req.session.logged_in});
                           
                           });
    

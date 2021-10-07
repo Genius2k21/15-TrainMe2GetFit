@@ -20,13 +20,13 @@
             <tbody>
                 {{#each clients}}
                     <tr>
-                        <th scope="row">{{this.client_id}}</th>
+                        <th scope="row">{{this.id}}</th>
                         <td>{{this.first_name}}</td>
                         <td>{{this.last_name}}</td>
                         <td>{{this.email}}</td>
                         <td>{{this.phone}}</td>
                         <td>{{formatDate this.create_dtm}}</td>
-                        <td><button id="view-client" type="button" class="btn btn-secondary btn-sm view-client" data-clientid="{{this.client_id}}">View</button></td>
+                        <td><button id="view-client" type="button" class="btn btn-secondary btn-sm view-client" data-clientid="{{this.id}}">View</button></td>
                     </tr>
                 {{/each}}
             </tbody>

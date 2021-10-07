@@ -19,7 +19,7 @@ DELIMITER //
 CREATE PROCEDURE `sp_getClient`(IN userid INT, IN clientid INT)
 BEGIN
 	SELECT * FROM client 
-    WHERE client_id = clientid 
+    WHERE id = clientid 
     AND user_id = userid;
 END //
 DELIMITER ;

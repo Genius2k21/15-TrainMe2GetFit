@@ -18,10 +18,10 @@ try{
    
       req.session.save(() =>{
          
-         req.session.user_id = response.user_id;
+         req.session.userid = response.user_id;
          req.session.logged_in = true;
-
          res.status(200).json(response, {});
+
       })
    });
 } catch (err){
@@ -39,8 +39,6 @@ router.post('/login' , async(req,res) =>{
       const username = req.body.username;
       const password = req.body.password;
       
-      console.log(`User name is ${username}`);
-      console.log(`Psswd is ? ${password}`);
       sequelize.query('CALL sp_getUser(:username, :password)',{replacements: {username: username, password: password }}).then(function(response){
     
        //Check if user has been found matching
@@ -48,12 +46,16 @@ router.post('/login' , async(req,res) =>{
          const userid  = response[0].user_id;
         
          req.session.save(() =>{
-            req.session.user_id = userid;
+            req.session.userid = userid;
+            req.session.username = username;
             req.session.logged_in = true;
-         })
+            res.status(200).json({ message: userid , logged_in:req.session.logged_in}); 
 
+         console.log(`inside of save what is Session is?  ${req.session.logged_in}`);
 
-         res.status(200).json({ message: userid }); 
+         });
+         console.log(`Session is?  ${req.session.logged_in}`);
+
       } else{
          res.status(404).json({ message: 'Incorrect email or password, please try again' }); 
          res.redirect('../login');
