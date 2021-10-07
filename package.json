@@ -24,7 +24,7 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
-    "express-session": "^1.17.1",
+    "express-session": "^1.17.2",
     "jscharting": "^3.1.0",
     "moment": "^2.29.1",
     "mysql2": "^2.3.0",

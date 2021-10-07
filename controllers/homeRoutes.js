@@ -9,7 +9,7 @@ const withAuth = require('../utils/auth');
 router.get('/login', (req, res) => {
     // If the user is already logged in, redirect the request to another route
     if (req.session.logged_in) {
-      const user = req.session.user_id;
+      const user = req.session.userid;
       res.render(`/api/landing/${user}`);
     }
     res.render('login');
@@ -25,7 +25,7 @@ router.get("/dashboard", withAuth, (req, res) => {
 });
 
 router.get("/clientView", withAuth, (req, res) => {
-
+    console.log(`inside clientView`)
     res.render('clientView');
 });
 

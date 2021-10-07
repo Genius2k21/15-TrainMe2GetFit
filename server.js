@@ -2,11 +2,10 @@ const path = require('path');
 const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
-const routes = require('./controllers');
-
-const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
+const routes = require('./controllers');
+const sequelize = require('./config/connection');
 // Import the custom helper methods
 const helpers = require('./utils/helper');
 
@@ -20,7 +19,10 @@ const hbs = exphbs.create({ helpers });
 
 const sess = {
   secret: 'Super secret secret',
-  cookie: {},
+  cookie: {
+    //Stored in milliseconds, lasts 6 hours
+    maxAge: 21600,
+  },
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
