@@ -8,16 +8,10 @@ const { Client, User } = require('../../models');
 router.get('/:userid',async(req,res) =>{
 
   try{
-    console.log(`within landing rout`)
+
     const userid = req.params.userid;
     const username = req.query.username;
-    console.log(`what are my values???
-    *
-    *
-    * userid : ${userid}
-    * 
-    * 
-    *  username : ${username}`);
+
     const dbClients =  await sequelize.query('CALL sp_getClients(:userid)',
                         {replacements: {userid: userid},
                           model: Client,
@@ -25,7 +19,11 @@ router.get('/:userid',async(req,res) =>{
                           raw: true,
                           type: QueryTypes.SELECT,
                           mapToModel: true}).then(function(response){
-                           console.log(response[0]);
+                           console.log(`
+                                what is user id  ${userid}
+                                what is user name ${username}
+                           
+                           `);
                             req.session.userid = userid;
                             req.session.username = username;
 

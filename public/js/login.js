@@ -83,8 +83,6 @@
 
 })(jQuery);
 
-// const userData = require('../../seeds/user-data.json')
-
 const loginFormHandler = async (event) => {
     event.preventDefault();
   
@@ -101,18 +99,17 @@ const loginFormHandler = async (event) => {
         headers: { 'Content-Type': 'application/json' },
         redirect: 'follow', 
       });
-      
+    
       const dataBack = await response.json();
+
       if (!response.ok) {
-        alert(dataBack.message);
-     
-    }
-  };
-  
+        alert(dataBack.message);    
+      } else {
+        document.location.replace(`/api/landing/${dataBack.message}?username=${username}`);
+      }
+    }   
+};
   
   document
     .querySelector('.validate-form')
     .addEventListener('submit', loginFormHandler);
-  
-
-  

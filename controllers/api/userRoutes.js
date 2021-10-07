@@ -51,9 +51,12 @@ router.post('/login' , async(req,res) =>{
             req.session.user_id = userid;
             req.session.logged_in = true;
          })
-         res.redirect('../landing/'+ userid +'?username='+username);
+
+
+         res.status(200).json({ message: userid }); 
       } else{
          res.status(404).json({ message: 'Incorrect email or password, please try again' }); 
+         res.redirect('../login');
       }
       });
    } catch (err){
