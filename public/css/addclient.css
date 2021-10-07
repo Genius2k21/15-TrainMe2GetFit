@@ -16,7 +16,7 @@ body {
 	-ms-align-items: center;
 	-moz-align-items: center;
 	-webkit-align-items: center;
-	background:var(--light-grey);
+	background:var(--white);
 }
 .wizard-v5-content   {
 	width: 851px;

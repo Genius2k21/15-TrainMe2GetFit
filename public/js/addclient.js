@@ -1,11 +1,4 @@
 
-
-const check1 = async (event) => {
-    event.preventDefault();
-    console.log(`what event ${event.target.type}`)
-}
-
-
 const submitNewClient = async (event) => {
     event.preventDefault();
 

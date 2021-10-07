@@ -56,13 +56,30 @@ npm install seeds
 
 ```
 
+For setups from clone
+
+```
+npm install
+
+cd db/
+
+mysql -u <your_mysql_user_name> -p
+
+source trainme_schema.sql;
+source trainme_alter_schema.sql;
+exit
+
+npm start
+
+```
 ## Usage:
 
 A demonstration of MVC architecture using Javascript and SQL languages to promote an app for enterpernuers in the fitness industry that want a simple app to track and communicate with clients.
 
 #### User Story:
-
+```
 As a personal trainer I want to be able to create new clients
+SO THAT my business can grow.
 As a personal trainer I want to be able to login to see my list of clients
 SO THAT I may track their progress
 AS a personal trainer I want to be able to update client information
@@ -80,7 +97,7 @@ As a personal trainer I want to be able to login and click on a client profile a
 SO that I may anaylze their progress and help client reach personal goals
 As a personal trainer I want to be able to add a additional workout or diet information
 SO that I may continue to grow and improve.
-
+```
 
 #### Structure:
 
@@ -96,7 +113,7 @@ Future feature Set Client as Inactive, "soft delete"
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Contributors:
- [Adam Niggebrugge](https://github.com/adam-niggebrugge)
+ [Adam N](https://github.com/adam-niggebrugge)
 
  [Erica B](https://github.com/unicorninvirgo)
 
