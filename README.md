@@ -4,7 +4,7 @@ Projects play a key role in your journey to becoming a full-stack web developer.
 
 As your first opportunity to show employers your collaborative skills and coding abilities, this particular project will be a focal point of your portfolio. Employers want to see what you can do, but they also want to see how you work with other developers. The more examples of deployed collaborative work you have in your portfolio, the more likely you are to get an interview and a job.
 
-https://git.heroku.com/trainme2getfit.git
+https://trainme2getfit.herokuapp.com
 
 ## Table of Contents 
 - [Installation](#installation)
